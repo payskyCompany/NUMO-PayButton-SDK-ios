@@ -12,15 +12,15 @@ import Alamofire
 
 public  class PaySkySDKColor {
 
-  public  static var mainBtnColor = Global.hexStringToUIColor("#00a7f6")
+  public  static var mainBtnColor = Global.hexStringToUIColor("#EAC604")
     
   public  static let RaduisNumber = CGFloat(4)
 
     
     
-  public  static var fontColor = Global.hexStringToUIColor("#2C93C6")
- public   static var secondColorBtn = Global.hexStringToUIColor("#2C93C6")
-  public  static var NavColor = Global.hexStringToUIColor("#00a7f6")
+  public  static var fontColor = Global.hexStringToUIColor("#EAC604")
+ public   static var secondColorBtn = Global.hexStringToUIColor("#EAC604")
+  public  static var NavColor = Global.hexStringToUIColor("#EAC604")
 
  //      static let NavColor = Global.hexStringToUIColor("#0F2A64")
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4A-Li-qTR">
                                                         <rect key="frame" x="0.0" y="0.0" width="15" height="60"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.65490196079999996" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.91764705879999997" green="0.77647058820000003" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="15" id="9nI-rU-hdG"/>
                                                         </constraints>
@@ -107,13 +107,13 @@
                                         <rect key="frame" x="0.0" y="140" width="445" height="60"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-iB-llF">
-                                                <rect key="frame" x="0.0" y="0.0" width="217.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="445" height="60"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-DL-ESA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="207.5" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="435" height="60"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QzY-YX-OCq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="415" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -125,7 +125,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="date_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nvm-oH-HCI">
-                                                                <rect key="frame" x="187.5" y="20" width="20" height="20"/>
+                                                                <rect key="frame" x="415" y="20" width="20" height="20"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="GSw-QV-F5F"/>
                                                                     <constraint firstAttribute="width" constant="20" id="rz3-ov-Qjh"/>
@@ -142,43 +142,11 @@
                                                     <constraint firstItem="NUx-DL-ESA" firstAttribute="leading" secondItem="fvr-iB-llF" secondAttribute="leading" id="jQ6-eK-5YO"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nJ-Vs-gQ2">
-                                                <rect key="frame" x="227.5" y="0.0" width="217.5" height="60"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X9a-yG-S19">
-                                                        <rect key="frame" x="0.0" y="0.0" width="207.5" height="60"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uoG-EH-gG8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177.5" height="60"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                                </variation>
-                                                            </textField>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cvc_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zVm-0b-86y">
-                                                                <rect key="frame" x="177.5" y="15" width="30" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="TXI-es-ICF"/>
-                                                                    <constraint firstAttribute="width" constant="30" id="cBQ-1V-Iwp"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="X9a-yG-S19" secondAttribute="bottom" id="IZd-vQ-1j3"/>
-                                                    <constraint firstAttribute="trailing" secondItem="X9a-yG-S19" secondAttribute="trailing" constant="10" id="P6L-dt-l7J"/>
-                                                    <constraint firstItem="X9a-yG-S19" firstAttribute="top" secondItem="0nJ-Vs-gQ2" secondAttribute="top" id="SGL-7g-pqK"/>
-                                                    <constraint firstItem="X9a-yG-S19" firstAttribute="leading" secondItem="0nJ-Vs-gQ2" secondAttribute="leading" id="WNa-Ps-hmX"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvq-EH-yiB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvq-EH-yiB">
                                         <rect key="frame" x="0.0" y="210" width="445" height="60"/>
-                                        <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.91764705879999997" green="0.77647058820000003" blue="0.015686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -194,7 +162,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="962-aI-UUL" firstAttribute="height" secondItem="VlL-yg-ghe" secondAttribute="height" id="57B-6f-fh7"/>
-                                    <constraint firstItem="uoG-EH-gG8" firstAttribute="height" secondItem="962-aI-UUL" secondAttribute="height" id="DDf-OL-O7H"/>
                                     <constraint firstItem="Kvq-EH-yiB" firstAttribute="height" secondItem="VlL-yg-ghe" secondAttribute="height" id="hNf-M4-GTP"/>
                                     <constraint firstItem="QzY-YX-OCq" firstAttribute="height" secondItem="962-aI-UUL" secondAttribute="height" id="hsp-9x-tbz"/>
                                     <constraint firstItem="135-EV-sD5" firstAttribute="height" secondItem="98n-hI-dyR" secondAttribute="height" id="lem-yp-uPT"/>
@@ -203,20 +170,19 @@
                         </subviews>
                     </stackView>
                 </subviews>
-                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="qYm-MP-gwc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="SKI-ko-koE"/>
                     <constraint firstAttribute="bottomMargin" secondItem="qYm-MP-gwc" secondAttribute="bottom" id="vHr-mK-uH2"/>
                 </constraints>
             </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <constraints>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="qYm-MP-gwc" secondAttribute="trailing" id="5HL-ov-FW1"/>
                 <constraint firstItem="qYm-MP-gwc" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="PA5-Ta-ZYN"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="BackgroundImage" destination="Ze3-9h-NYR" id="fut-sw-3Cu"/>
-                <outlet property="CVCTF" destination="uoG-EH-gG8" id="jVh-VM-NQG"/>
                 <outlet property="CardHolderName" destination="962-aI-UUL" id="JjO-uB-jir"/>
                 <outlet property="CardNumbeTV" destination="VlL-yg-ghe" id="wh6-63-M7i"/>
                 <outlet property="DateTF" destination="QzY-YX-OCq" id="m50-lb-wnf"/>
@@ -228,9 +194,11 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="card_icon" width="43" height="27"/>
-        <image name="cvc_icon" width="14.5" height="9.5"/>
-        <image name="date_icon" width="13.5" height="13"/>
-        <image name="scan_card" width="97" height="82"/>
+        <image name="card_icon" width="32" height="22.5"/>
+        <image name="date_icon" width="23.5" height="24"/>
+        <image name="scan_card" width="31" height="31"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

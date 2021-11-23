@@ -9,9 +9,6 @@
 import Foundation
 import EVReflection
 public class QrGenratorRequest: BaseResponse {
-
-    
-    
     var Amount: Double = 0.0
     var AmountTrxn = 0
     var TahweelQR: Bool = true

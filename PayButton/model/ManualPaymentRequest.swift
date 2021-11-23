@@ -22,13 +22,11 @@ public class ManualPaymentRequest: BaseResponse {
     
     
     var CurrencyCodeTrxn = MainScanViewController.paymentData.currencyCode
-    var cvv2 = ""
     var CardHolderName = ""
     
-    var CVV2 = ""
     var DateExpiration = ""
     var PAN = ""
-    var  AmountTrxn  = ""
+    var AmountTrxn  = 0
     var IsWebRequest = true
     var ReturnURL = ApiURL.MAIN_API_LINK.replacingOccurrences(of: "/Cube/PayLink.svc/api/", with: "")
     var MerchantReference = MainScanViewController.paymentData.refnumber

@@ -33,14 +33,11 @@ public class PaymentViewController  {
             return
         }
         
-        var DoubleAmount = Double(self.amount) ??  0.0
-        DoubleAmount = DoubleAmount * 100.00
-        
         let paymentData = PaymentData()
         
         
        
-        paymentData.amount = DoubleAmount
+        paymentData.amount = self.amount
         paymentData.refnumber = refnumber
 
         paymentData.merchantId = mId
@@ -56,7 +53,7 @@ public class PaymentViewController  {
         
         
      
-        if  (paymentData.amount != 0
+        if  ((Double(self.amount) ??  0.0) != 0
             &&
             !paymentData.merchantId.isEmpty &&
             

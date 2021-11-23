@@ -13,20 +13,14 @@ public class ApiManger {
 
     
     
-     static func  PayByCard( CardHolderName :String ,PAN:String,  cvv2:String,
-                             DateExpiration:String,
+     static func  PayByCard( CardHolderName :String ,PAN:String,DateExpiration:String,
                              completion: @escaping (TransactionStatusResponse) -> ()){
         let addcardRequest = ManualPaymentRequest()
         addcardRequest.PAN = PAN
-        addcardRequest.cvv2 = cvv2
         addcardRequest.CardHolderName = CardHolderName
-        
-        
-        
-        
-        
         addcardRequest.DateExpiration = DateExpiration
-        addcardRequest.AmountTrxn = String ( MainScanViewController.paymentData.amount )
+        addcardRequest.AmountTrxn = Int(MainScanViewController.paymentData.amount.replacingOccurrences(of: ".", with: "")) ?? 0
+        print(addcardRequest)
         executePOST(path: ApiURL.PayByCard,parameters: addcardRequest, completion: { (value) in
             completion(   TransactionStatusResponse(json: value))
         } )
@@ -69,7 +63,7 @@ public class ApiManger {
     static func  generateQrCode(
                            completion: @escaping (QrGenratorResponse) -> ()){
         let addcardRequest = QrGenratorRequest()
-        addcardRequest.AmountTrxn = Int(MainScanViewController.paymentData.amount)
+        addcardRequest.AmountTrxn = Int(MainScanViewController.paymentData.amount.replacingOccurrences(of: ".", with: "")) ?? 0
         executePOST(path: ApiURL.GenerateQR,parameters: addcardRequest, completion: { (value) in
             completion(   QrGenratorResponse(json: value))
         } )

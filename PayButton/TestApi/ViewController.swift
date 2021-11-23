@@ -32,6 +32,10 @@ class ViewController: UIViewController, PaymentDelegate {
         TerminalIDLabel.text =  "Terminal ID_paysky".localizedPaySky()
         AmountLabel.text = "Amount".localizedPaySky()
         CurrencyLabel.text = "Currency_paysky".localizedPaySky()
+        
+        let tintedImage = ChangeLang.imageView?.image?.withRenderingMode(.alwaysTemplate)
+        ChangeLang.setImage(tintedImage, for: .normal)
+        ChangeLang.tintColor = PaySkySDKColor.mainBtnColor
     }
     
     @IBAction func CopyResponse(_ sender: Any) {
@@ -120,7 +124,7 @@ class ViewController: UIViewController, PaymentDelegate {
                
                
           
-               SecureHash.setTextFieldStyle("Secure Hash", title: "", textColor: UIColor.black, font:Global.setFont(14) ,
+               SecureHash.setTextFieldStyle("Secret Key", title: "", textColor: UIColor.black, font:Global.setFont(14) ,
                                             borderWidth: 1, borderColor: UIColor.gray, backgroundColor: UIColor.white, cornerRadius: PaySkySDKColor.RaduisNumber , placeholderColor: UIColor.gray,maxLength: 100,padding: 20, keyboardType: .alphabet)
                
 

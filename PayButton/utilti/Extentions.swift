@@ -374,17 +374,6 @@ extension URL {
         return parameters
     }
 }
-func cleanDollars(_ value: String?) -> String {
-    guard value != nil else { return "$0.00" }
-    let doubleValue = Double(value!) ?? 0.0
-    let formatter = NumberFormatter()
-    formatter.currencyCode = "USD"
-    formatter.currencySymbol = ""
-    formatter.minimumFractionDigits = (value!.contains(".00")) ? 0 : 2
-    formatter.maximumFractionDigits = 2
-    formatter.numberStyle = .currencyAccounting
-    return formatter.string(from: NSNumber(value: doubleValue)) ?? "\(doubleValue)"
-}
 
 enum HMACAlgorithm {
     case MD5, SHA1, SHA224, SHA256, SHA384, SHA512

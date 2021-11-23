@@ -1,7 +1,4 @@
 
-
-
-
 "app_name_paysky"="زر الدفع";
 
 "Merchant ID_paysky" = "رقم التاجر";
@@ -9,7 +6,7 @@
 "Amount" = "المبلغ";
 "Currency_paysky" = "العملة";
 
-"change_lang" = "تغيير اللغة";
+"change_lang" = "English ";
 
 "Done" = "تأكيد";
 "request_send_to_mobile" = "تم ارسال الطلب بنجاح";
