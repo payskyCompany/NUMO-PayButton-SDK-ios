@@ -9,7 +9,24 @@
 import UIKit
 import MOLH
 
-class ViewController: UIViewController, PaymentDelegate {
+class ViewController: UIViewController, PaymentDelegate , UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return DataToShow.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return DataToShow[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedOne = row
+    }
+    var DataToShow = ["Numo Testing", "Numo Production"]
+    var selectedOne = 0
+    var DataToSendUPG: [NumoUrlTypes] = [.Numo_Testing ,.Numo_Production]
+    
     
     override func viewWillAppear(_ animated: Bool) {
         if MOLHLanguage.currentAppleLanguage() != "ar" {
@@ -197,6 +214,7 @@ class ViewController: UIViewController, PaymentDelegate {
         paymentViewController.Currency = CurrencyEd.text!
         paymentViewController.isProduction = false
         paymentViewController.Key = SecureHash.text!
+        paymentViewController.AppStatus = DataToSendUPG[selectedOne]
         paymentViewController.pushViewController()
     }
     

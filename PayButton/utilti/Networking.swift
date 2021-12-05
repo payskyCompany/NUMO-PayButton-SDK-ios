@@ -26,9 +26,6 @@ func executePOST(path:String,method:HTTPMethod? = .post,
         
         UIApplication.topViewController()?.view.showLoadingIndicator()
         
-    }else {
-        print("  URL: \(path)")
-        print(" REQUEST: \(String(describing: parameters?.toJsonString()))")
     }
     
     AF.request(ApiURL.MAIN_API_LINK + path, method: method!, parameters: convertToDictionary(text: (parameters?.toJsonString())!), encoding: JSONEncoding.default)

@@ -7,6 +7,16 @@
 //
 
 import Foundation
+
+class AppConstant {
+    static func setPayBtnTestingMode(){
+        ApiURL.MAIN_API_LINK = "https://npg.moamalat.net/Cube/PayLink.svc/api/";
+    }
+    static func setPayBtnProductionMode(){
+        ApiURL.MAIN_API_LINK = "https://tnpg.moamalat.net/Cube/PayLink.svc/api/";
+    }
+   
+}
 public class PaymentParams {
     static var MERCHANT_ID = "merchant_id";
     static var TERMINAL_ID = "terminal_id";

@@ -137,7 +137,7 @@ class MainScanViewController: BasePaymentViewController , UITableViewDataSource,
             self.MerchantLabel.text =  "merchant".localizedPaySky()
         self.AmountLabel.text =  "amount".localizedPaySky()
             self.AmountValue.text =    "\(MainScanViewController.paymentData.currencyCode )".localizedPaySky()
-            + " " + MainScanViewController.paymentData.amount
+                + " " + returnAmountValue(amount: MainScanViewController.paymentData.amount)
         self.MerchantId.text = String (MainScanViewController.paymentData.merchant_name)
         // Do any additional setup after loading the view.
         HeaderView.layer.cornerRadius = PaySkySDKColor.RaduisNumber
@@ -154,12 +154,32 @@ class MainScanViewController: BasePaymentViewController , UITableViewDataSource,
             self.MethodTypeStackView.isHidden = true
         }else if MainScanViewController.paymentData.PaymentMethod == 2 {
             self.MethodTypeStackView.isHidden = false
-                }
+        }
         if MainScanViewController.paymentData.PaymentMethod == 0 {
             selectedCell = 1
         }
         if MainScanViewController.paymentData.PaymentMethod == 1 {
             selectedCell = 2
+        }
+    }
+    
+    func returnAmountValue(amount: String) -> String {
+        if amount.contains(".") {
+            if amount.split(separator: ".")[1].count == 0 {
+                return amount + "000"
+            }
+            else if amount.split(separator: ".")[1].count == 1 {
+                return amount + "00"
+            }
+            else if amount.split(separator: ".")[1].count == 2 {
+                return amount + "0"
+            }
+            else {
+                return amount
+            }
+        }
+        else {
+            return amount + ".000"
         }
     }
     override func didReceiveMemoryWarning() {

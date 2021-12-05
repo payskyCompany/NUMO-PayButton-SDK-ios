@@ -10,27 +10,20 @@ import Foundation
 import EVReflection
 
 public class ManualPaymentRequest: BaseResponse {
-
-    
     var ThreeDSECI = ""
     var ThreeDSXID = ""
     var ThreeDSenrolled = ""
     var ThreeDSstatus = ""
     var VerToken = ""
     var VerType = ""
-    
-    
-    
     var CurrencyCodeTrxn = MainScanViewController.paymentData.currencyCode
     var CardHolderName = ""
-    
     var DateExpiration = ""
     var PAN = ""
     var AmountTrxn  = 0
     var IsWebRequest = true
     var ReturnURL = ApiURL.MAIN_API_LINK.replacingOccurrences(of: "/Cube/PayLink.svc/api/", with: "")
     var MerchantReference = MainScanViewController.paymentData.refnumber
-    
     var SystemTraceNr = MainScanViewController.paymentData.refnumber
     
    

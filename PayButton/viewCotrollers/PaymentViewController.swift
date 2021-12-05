@@ -18,6 +18,8 @@ public class PaymentViewController  {
     public   var Currency = ""
     public   var refnumber = ""
     public   var isProduction = false    
+    public   var AppStatus : NumoUrlTypes = .Numo_Testing
+
     
     public  var delegate: PaymentDelegate?
     
@@ -32,7 +34,12 @@ public class PaymentViewController  {
             print("Please enter all  data ");
             return
         }
-        
+        switch AppStatus {
+            case .Numo_Testing:
+                AppConstant.setPayBtnTestingMode()
+            case .Numo_Production:
+                AppConstant.setPayBtnProductionMode()
+        }
         let paymentData = PaymentData()
         
         
@@ -99,6 +106,7 @@ public class PaymentViewController  {
                 UIApplication.topViewController()?.view.makeToast(  paymentresponse.Message)
                 }
             }
+            
             
         }
         
