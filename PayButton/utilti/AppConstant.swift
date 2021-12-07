@@ -10,10 +10,10 @@ import Foundation
 
 class AppConstant {
     static func setPayBtnTestingMode(){
-        ApiURL.MAIN_API_LINK = "https://npg.moamalat.net/Cube/PayLink.svc/api/";
+        ApiURL.MAIN_API_LINK = "https://tnpg.moamalat.net/Cube/PayLink.svc/api/";
     }
     static func setPayBtnProductionMode(){
-        ApiURL.MAIN_API_LINK = "https://tnpg.moamalat.net/Cube/PayLink.svc/api/";
+        ApiURL.MAIN_API_LINK = "https://npg.moamalat.net/Cube/PayLink.svc/api/";
     }
    
 }
