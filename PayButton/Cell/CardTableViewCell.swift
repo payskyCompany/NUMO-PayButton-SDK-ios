@@ -265,13 +265,12 @@ ScanCardtDelegate  {
                     self.BackgroundImage.image = #imageLiteral(resourceName: "UnionPay")
                 }else if type.name == "Mir"  {
                     self.BackgroundImage.image = #imageLiteral(resourceName: "Mir")
-                    
-                }else  if type.name == "Meza"{
+                }
+                else  if type.name == "NUMO"{
+                    self.BackgroundImage.image = UIImage(named: "numo-logo")
+                }
+                else  if type.name == "Meza"{
                     self.BackgroundImage.image =  #imageLiteral(resourceName: "miza_logo")
-                    
-                
-                
-                
                 } else {
                     self.validCard = false
 

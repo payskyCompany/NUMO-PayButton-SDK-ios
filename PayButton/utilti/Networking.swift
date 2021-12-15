@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import UIKit
+import MOLH
 
 func executePOST(path:String,method:HTTPMethod? = .post,
                  parameters: BaseResponse? = BaseResponse(), completion: @escaping (String) -> () ) {
@@ -28,7 +29,7 @@ func executePOST(path:String,method:HTTPMethod? = .post,
         
     }
     
-    AF.request(ApiURL.MAIN_API_LINK + path, method: method!, parameters: convertToDictionary(text: (parameters?.toJsonString())!), encoding: JSONEncoding.default)
+    AF.request(ApiURL.MAIN_API_LINK + path, method: method!, parameters: convertToDictionary(text: (parameters?.toJsonString())!), encoding: JSONEncoding.default,headers: [HTTPHeader(name: "Accept-Language", value: MOLHLanguage.currentAppleLanguage().lowercased().contains("ar") ? "ar" : "en")])
         .responseString { response  in
 
             

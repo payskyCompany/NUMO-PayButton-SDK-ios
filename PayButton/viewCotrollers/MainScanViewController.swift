@@ -118,6 +118,7 @@ class MainScanViewController: BasePaymentViewController , UITableViewDataSource,
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        MainScanViewController.paymentData.amount = returnAmountValue(amount: MainScanViewController.paymentData.amount)
         changelang.setTitle("change_lang".localizedPaySky(), for: .normal)
         let tintedImage = changelang.imageView?.image?.withRenderingMode(.alwaysTemplate)
         changelang.setImage(tintedImage, for: .normal)
@@ -137,7 +138,7 @@ class MainScanViewController: BasePaymentViewController , UITableViewDataSource,
             self.MerchantLabel.text =  "merchant".localizedPaySky()
         self.AmountLabel.text =  "amount".localizedPaySky()
             self.AmountValue.text =    "\(MainScanViewController.paymentData.currencyCode )".localizedPaySky()
-                + " " + returnAmountValue(amount: MainScanViewController.paymentData.amount)
+                + " " + MainScanViewController.paymentData.amount
         self.MerchantId.text = String (MainScanViewController.paymentData.merchant_name)
         // Do any additional setup after loading the view.
         HeaderView.layer.cornerRadius = PaySkySDKColor.RaduisNumber
