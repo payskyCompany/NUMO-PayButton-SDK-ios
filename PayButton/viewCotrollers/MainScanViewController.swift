@@ -118,6 +118,10 @@ class MainScanViewController: BasePaymentViewController , UITableViewDataSource,
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
+        
         MainScanViewController.paymentData.amount = returnAmountValue(amount: MainScanViewController.paymentData.amount)
         changelang.setTitle("change_lang".localizedPaySky(), for: .normal)
         let tintedImage = changelang.imageView?.image?.withRenderingMode(.alwaysTemplate)

@@ -17,7 +17,6 @@ public class PaymentViewController  {
     public   var Key = ""
     public   var Currency = ""
     public   var refnumber = ""
-    public   var isProduction = false    
     public   var AppStatus : NumoUrlTypes = .Numo_Testing
 
     

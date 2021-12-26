@@ -20,6 +20,11 @@ class CardScanViewController: BasePaymentViewController ,PayCardsRecognizerPlatf
     @IBOutlet weak var CameraView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
+        
+        
        recognizer = PayCardsRecognizer(delegate: self, resultMode: .async, container: self.CameraView, frameColor: .green)
         // Do any additional setup after loading the view.
         
