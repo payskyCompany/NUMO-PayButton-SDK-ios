@@ -93,6 +93,10 @@ public class CreditCardValidator {
             "regex": "^63\\d{0,}$"
         ],
         [
+            "name": "NUMO",
+            "regex": "^8\\d{0,}$"
+        ],
+        [
             "name": "Amex",
             "regex": "^3[47][0-9]{5,}$"
         ], [
