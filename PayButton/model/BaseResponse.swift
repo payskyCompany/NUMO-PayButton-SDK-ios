@@ -24,7 +24,7 @@ public class BaseResponse: EVObject {
         let date : Date = Date()
         
         let dateFormatter = DateFormatter()
-//        dateFormatter.locale = Locale(identifier: "en_us")
+        dateFormatter.locale = Locale(identifier: "en_us")
         dateFormatter.dateFormat = "yyyyMMddHHmmssSSS"
         let todaysDate = dateFormatter.string(from: date)
         return  todaysDate
