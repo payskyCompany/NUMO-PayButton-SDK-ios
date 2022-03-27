@@ -24,19 +24,20 @@ ScanCardtDelegate  {
             PreviousLength = DateTF.text!.count
             return
         }
-        if DateTF.text!.count == 1 && Int(DateTF.text!)! > 2 {
-            DateTF.text! = "0" + DateTF.text! + "/"
+        var dateValue = DateTF.text!.replacedArabicDigitsWithEnglish
+        if dateValue.count == 1 && Int(dateValue)! > 2 {
+            dateValue = "0" + dateValue + "/"
         }
-        if DateTF.text!.count == 2 && !DateTF.text!.contains("/") {
-            if Int(DateTF.text!)! > 12 {
-                DateTF.text! = "12/"
+        if dateValue.count == 2 && !dateValue.contains("/") {
+            if Int(dateValue)! > 12 {
+                dateValue = "12/"
             }
             else {
-                DateTF.text! = DateTF.text! + "/"
+                dateValue = dateValue + "/"
             }
         }
-        let val = DateTF.text!.split(separator: "/")
-        if DateTF.text!.count == 5 && val.count > 1 {
+        let val = dateValue.split(separator: "/")
+        if dateValue.count == 5 && val.count > 1 {
             if Int(String(val[1] + ""))! > 19 {
                 validDate = true;
                                   
@@ -45,7 +46,7 @@ ScanCardtDelegate  {
                 
             }
         }
-        
+        DateTF.text = dateValue
         PreviousLength = DateTF.text!.count
        
     }
@@ -184,7 +185,7 @@ ScanCardtDelegate  {
         ScanBtn.imageView?.contentMode = .scaleAspectFit
         CardNumbeTV.setTextFieldStyle( "card_number".localizedPaySky() , title: "", textColor: UIColor.black, font:Global.setFont(14) , borderWidth: 0, borderColor: UIColor.clear, backgroundColor: UIColor.white, cornerRadius: 0, placeholderColor: UIColor.gray,maxLength: 18,padding: 10)
         
-        DateTF.setTextFieldStyle("expire_date".localizedPaySky() , title: "", textColor: UIColor.black, font:Global.setFont(14) , borderWidth: 0, borderColor: UIColor.gray, backgroundColor: UIColor.white, cornerRadius: 0, placeholderColor: UIColor.gray,maxLength: 5,padding: 10)
+        DateTF.setTextFieldStyle("expire_date".localizedPaySky() , title: "", textColor: UIColor.black, font:Global.setFont(14) , borderWidth: 0, borderColor: UIColor.gray, backgroundColor: UIColor.white, cornerRadius: 0, placeholderColor: UIColor.gray,maxLength: 5,padding: 10,keyboardType: .asciiCapableNumberPad)
         
         
         CardHolderName.setTextFieldStyle("name_on_card".localizedPaySky()  , title: "", textColor: UIColor.black, font:Global.setFont(14) , borderWidth: 0, borderColor: UIColor.gray, backgroundColor: UIColor.white, cornerRadius: 0, placeholderColor: UIColor.gray,maxLength: 10,padding: 10,keyboardType: UIKeyboardType.default)
