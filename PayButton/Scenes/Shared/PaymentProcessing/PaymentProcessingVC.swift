@@ -145,8 +145,17 @@ extension PaymentProcessingVC {
         merchantLbl.text = "merchant".localizedString().uppercased()
         merchantNameLbl.text = presenter.getPaymentMethodData().merchantName
         amountLbl.text = "amount".localizedString().uppercased()
-        amountValueLbl.text = "\(MerchantDataManager.shared.merchant.currencyCode)".localizedString()
-            + " " + String(format: "%.2f", MerchantDataManager.shared.merchant.amount)
+//        amountValueLbl.text = "\(MerchantDataManager.shared.merchant.currencyCode)".localizedString()
+//            + " " + String(format: "%.2f", MerchantDataManager.shared.merchant.amount)
+        
+        if let currencyCode = CurrencyHelper().getCurrencyCode(currencyCode: String(MerchantDataManager.shared.merchant.currencyCode)) {
+            amountValueLbl.text = "\(currencyCode.currencyShortName)"
+            + " " + String(MerchantDataManager.shared.merchant.amount.rounded(.towardZero))
+        } else {
+            amountValueLbl.text = "Error"
+//            amountValueLbl.text = "\(MerchantDataManager.shared.merchant.currencyCode)".localizedString()
+//            + " " + String(MerchantDataManager.shared.merchant.amount.rounded(.towardZero))
+        }
 
         changeLangBtn.setTitle("change_lang".localizedString(), for: .normal)
         termsAndConditionsBtn.setTitle("terms_conditions".localizedString(), for: .normal)

@@ -264,8 +264,14 @@ extension AddNewCardVC {
         merchantLbl.text = "merchant".localizedString().uppercased()
         merchantNameLbl.text = presenter.getPaymentMethodData().merchantName
         amountLbl.text = "amount".localizedString().uppercased()
-        amountValueLbl.text = "\(MerchantDataManager.shared.merchant.currencyCode)".localizedString()
-            + " " + String(format: "%.2f", MerchantDataManager.shared.merchant.amount)
+        
+        if let currencyCode = CurrencyHelper().getCurrencyCode(currencyCode: String(MerchantDataManager.shared.merchant.currencyCode)) {
+            amountValueLbl.text = "\(currencyCode.currencyShortName)"
+            + " " + NumberFormatter.formatAmount(MerchantDataManager.shared.merchant.amount)
+        } else {
+            amountValueLbl.text = "\(MerchantDataManager.shared.merchant.currencyCode)".localizedString()
+            + " " + NumberFormatter.formatAmount(MerchantDataManager.shared.merchant.amount)
+        }
 
         proceedBtn.setTitle("proceed".localizedString(), for: .normal)
         backBtn.setTitle("back".localizedString(), for: .normal)

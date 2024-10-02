@@ -55,7 +55,7 @@ class AddNewCardPresenter: AddNewCardPresenterProtocol {
     func callPayByCardAPI(cardNumber: String, cardHolderName: String, expiryDate: String, cvv: String) {
         view?.startLoading()
 
-        let integerAmount = Int(MerchantDataManager.shared.merchant.amount * 100.00)
+        let integerAmount = Int(MerchantDataManager.shared.merchant.amount)
         let parameters = PayByCardParameters(amountTrxn: String(integerAmount),
                                              merchantId: MerchantDataManager.shared.merchant.merchantId,
                                              terminalId: MerchantDataManager.shared.merchant.terminalId,
@@ -76,6 +76,7 @@ class AddNewCardPresenter: AddNewCardPresenterProtocol {
             view?.endLoading()
             switch result {
             case let .success(response):
+                print(response)
                 if response.success == true {
                     if response.tokenCustomerId != "" && response.tokenCustomerId != nil {
                         MerchantDataManager.shared.merchant.customerId = response.tokenCustomerId ?? ""
@@ -87,7 +88,7 @@ class AddNewCardPresenter: AddNewCardPresenterProtocol {
                         }
                     } else {
                         // if the executed transaction action code is not equal to 00
-                        if response.actionCode == nil || response.actionCode?.isEmpty == true || !(response.actionCode == "00") {
+                        if response.actionCode == nil || response.actionCode?.isEmpty == true || !(response.actionCode == "000") {
                             // transaction failed
                             view?.showErrorAlertView(withMessage: String(response.message ?? ""))
                         } else {

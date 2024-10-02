@@ -54,7 +54,7 @@ class SelectCardListPresenter: SelectCardListPresenterProtocol {
     func callPayByCardAPI(cardID: Int, cvv: String) {
         view?.startLoading()
 
-        let integerAmount = Int(MerchantDataManager.shared.merchant.amount * 100.00)
+        let integerAmount = Int(MerchantDataManager.shared.merchant.amount)
         let parameters = TokenizedCardParameters(amountTrxn: String(integerAmount),
                                                  merchantId: MerchantDataManager.shared.merchant.merchantId,
                                                  terminalId: MerchantDataManager.shared.merchant.terminalId,

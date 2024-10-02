@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -71,7 +71,7 @@
                         <action selector="subscriptionTypeValueChanged:" destination="-1" eventType="valueChanged" id="HLU-PT-cMS"/>
                     </connections>
                 </segmentedControl>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PaySky PayButton - Version " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxb-qR-qA5">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIM PayButton - Version " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxb-qR-qA5">
                     <rect key="frame" x="16" y="176" width="343" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="oqP-jm-oBc"/>
@@ -421,11 +421,11 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power_by_paysky" translatesAutoresizingMaskIntoConstraints="NO" id="wEW-2U-Kbj">
-                    <rect key="frame" x="239" y="922" width="120" height="50"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gimlogo" translatesAutoresizingMaskIntoConstraints="NO" id="wEW-2U-Kbj">
+                    <rect key="frame" x="289" y="922" width="70" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="fpP-Dg-2TC"/>
-                        <constraint firstAttribute="width" constant="120" id="vCq-nt-ZjB"/>
+                        <constraint firstAttribute="width" constant="70" id="vCq-nt-ZjB"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSM-hG-njZ">
@@ -466,10 +466,10 @@
                 <constraint firstItem="gcf-Pd-6xe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Qp2-n1-CbZ"/>
                 <constraint firstItem="dxb-qR-qA5" firstAttribute="top" secondItem="ZIq-KR-Bfo" secondAttribute="bottom" constant="10" id="Qtk-js-2Do"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wEW-2U-Kbj" secondAttribute="bottom" constant="12" id="Rr0-2N-GOg"/>
+                <constraint firstItem="wEW-2U-Kbj" firstAttribute="trailing" secondItem="Mb4-65-vTQ" secondAttribute="trailing" id="enj-Py-EJi"/>
                 <constraint firstItem="wEW-2U-Kbj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dSM-hG-njZ" secondAttribute="trailing" constant="8" symbolic="YES" id="jwW-Sz-zm8"/>
                 <constraint firstItem="dSM-hG-njZ" firstAttribute="centerY" secondItem="wEW-2U-Kbj" secondAttribute="centerY" id="m2u-Z9-QHg"/>
                 <constraint firstItem="wEW-2U-Kbj" firstAttribute="top" secondItem="Mb4-65-vTQ" secondAttribute="bottom" constant="25" id="qQe-Bw-1bI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wEW-2U-Kbj" secondAttribute="trailing" constant="16" id="sFQ-gJ-oxn"/>
                 <constraint firstItem="Mb4-65-vTQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gcf-Pd-6xe" secondAttribute="bottom" constant="16" id="vFE-7C-lpI"/>
                 <constraint firstItem="gcf-Pd-6xe" firstAttribute="top" secondItem="6cV-Rv-b2R" secondAttribute="bottom" constant="16" id="vWQ-cC-RLD"/>
                 <constraint firstItem="6cV-Rv-b2R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="vcQ-y5-3xq"/>
@@ -485,10 +485,10 @@
         </view>
     </objects>
     <resources>
+        <image name="gimlogo" width="1707" height="1707"/>
         <image name="ic_wallet_sdk" width="100" height="87"/>
-        <image name="power_by_paysky" width="640" height="192.66667175292969"/>
         <namedColor name="MainColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12549019607843137" green="0.20392156862745098" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

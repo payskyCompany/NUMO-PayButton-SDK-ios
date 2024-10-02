@@ -1,14 +1,12 @@
 PODS:
   - Alamofire (5.0.5)
   - DynamicBlurView (4.1.0)
-  - MOLH (1.4.3)
   - PayCardsRecognizer (1.1.7)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.5)
-  - MOLH (~> 1.4.3)
   - PayCardsRecognizer (~> 1.1.7)
   - PopupDialog (~> 1.1.1)
 
@@ -16,17 +14,15 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - DynamicBlurView
-    - MOLH
     - PayCardsRecognizer
     - PopupDialog
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
-  MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
   PayCardsRecognizer: 2e4d1b2fdd5f1528fb56064a91e1d58a1af7a2db
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
 
-PODFILE CHECKSUM: 0432ef99a00cf42450efcf41e6bd978b51f5f753
+PODFILE CHECKSUM: 1b559ff55182932db9be2b0deea7f50ea27f5d5c
 
 COCOAPODS: 1.15.2
