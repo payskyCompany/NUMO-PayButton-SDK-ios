@@ -1,16 +1,16 @@
 Pod::Spec.new do |spec|
   spec.name         = "PayButtonIOS"
-  spec.version      = "1.2.0"
-  spec.summary      = "Paysky PayButton SDK"
-  spec.description  = "The PayButton helps make the integration of card acceptance into your app easy."
-  spec.homepage     = "https://github.com/payskyCompany/payButtonIOS"
+  spec.version      = "1.0.0"
+  spec.summary      = "GIM PayButton SDK"
+  spec.description  = "PayButton SDK helps make the integration of card acceptance into your app easy."
+  spec.homepage     = "https://github.com/GIMPAY/paybutton-sdk-ios"
   spec.license      = "MIT"
 
-  spec.author             = { "Paysky Company" => "ahmed.agamy@paysky.io" }
+  spec.author             = { "Paysky Company" => "amir.morsy@paysky.io" }
   spec.social_media_url   = "https://paysky.io/"
 
   spec.platform           = :ios, "13.0"
-  spec.source             = { :git => "https://github.com/payskyCompany/PayButtonIOS.git", :tag => spec.version.to_s }
+  spec.source             = { :git => "https://github.com/GIMPAY/paybutton-sdk-ios.git", :tag => spec.version.to_s }
   spec.swift_version      = "5.0"
 
   spec.public_header_files = "PayButton/PayButton-Bridging-Header.h"
