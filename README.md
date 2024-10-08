@@ -1,9 +1,9 @@
-<p align="center"><a href="https://paysky.io/" target="_blank"><img width="440" src="https://paysky.io/wp-content/uploads/2023/12/Paysky-logo.png"></a></p>
+<p align="center"><a href="https://www.gim-uemoa.org/" target="_blank"><img width="440" src="https://i.ibb.co/0FTNnDb/83ac8f45c38ae9af0b22cfaace84c18362b95a8e7db0622f196a78b85f23ecec.png"></a></p>
 
-# PaySky PayButton SDK
+# GIM PayButton SDK
 The PayButton helps make the integration of card acceptance into your app easy.
 
-You simply provide the merchant information you receieve from PaySky to the payment SDK. The PayButton displays a ready-made view that guides the merchant through the payment process and shows a summary screen at the end of the transaction.
+You simply provide the merchant information you receieve from GIM to the payment SDK. The PayButton displays a ready-made view that guides the merchant through the payment process and shows a summary screen at the end of the transaction.
 
 ### Getting Started
 
@@ -21,7 +21,7 @@ pod init
 3. Add the pod to your Podfile:
 **Open Podfile** with any text editor tool then add the next line inside "target 'PayButton' do "scoop 
 ```
-pod 'PayButtonIOS', :git => 'https://github.com/payskyCompany/PayButtonIOS.git', :branch => 'master'
+pod 'PayButtonIOS', :git => 'https://github.com/GIMPAY/paybutton-sdk-ios.git', :branch => 'master'
 ```
 4. Open the terminal and run
 ```
@@ -65,11 +65,11 @@ Place disable_input_output_paths: true in Podfile, to skip optimisation and alwa
 install! 'cocoapods', :disable_input_output_paths => true
 ```
 ## 🚀 Deployment
-1. Before deploying your project live, you should get a merchant ID and terminal ID provided by PaySky.
+1. Before deploying your project live, you should get a merchant ID and terminal ID provided by GIM.
 2. You should keep your merchant ID and terminal ID **secured** in your project, **encrypt** them before save them in project.
 
 ## 🛠 How to use
-In order to use the SDK you should use a production merchantId, terminalId and secure_hash key provided by PaySky.
+In order to use the SDK you should use a production merchantId, terminalId and secure_hash key provided by GIM.
 
 ### 👉 Usage/Examples 
 In the class you want to intiate the payment from, you should import the framework
@@ -83,12 +83,12 @@ let paymentViewController = PaymentViewController(
                 merchantId: "merchantId", //Mandatory
                 terminalId: "terminalId", //Mandatory
                 amount: 100.0, //Mandatory - provide the amount and currency with it's decimal factor
-                currencyCode: 0, //Mandatory - Provided by PaySky
-                secureHashKey: "secure_hash",//Mandatory - Provided by PaySky
-                trnxRefNumber: "", //Optinal (remove it if not use), Provided by PaySky
-                customerId: "", //Optinal (remove it if not use), Provided by PaySky
-                customerMobile: "", //Optinal (remove it if not use), Provided by PaySky
-                customerEmail: "", //Optinal (remove it if not use), Provided by PaySky
+                currencyCode: 0, //Mandatory - Provided by GIM
+                secureHashKey: "secure_hash",//Mandatory - Provided by GIM
+                trnxRefNumber: "", //Optinal (remove it if not use), Provided by GIM
+                customerId: "", //Optinal (remove it if not use), Provided by GIM
+                customerMobile: "", //Optinal (remove it if not use), Provided by GIM
+                customerEmail: "", //Optinal (remove it if not use), Provided by GIM
                 isProduction: false //Choose the needed inviroment
             )
 ```
@@ -139,4 +139,4 @@ extension ViewController: PayButtonDelegate {
 
 
 ## 👀 Demo
-[iOS Sample Project](https://github.com/payskyCompany/PayButtonIOSExample.git)
+[iOS Sample Project](https://github.com/GIMPAY/paybutton-sdk-ios-example.git)
