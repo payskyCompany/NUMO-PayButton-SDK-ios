@@ -6,9 +6,9 @@ target 'PayButton' do
   use_frameworks!
 
   # Pods for PayButton
-  pod "Alamofire", "~> 5.0.5"
-  pod "PayCardsRecognizer", "~> 1.1.7"
-  pod "PopupDialog", "~> 1.1.1"
+  pod "Alamofire"
+  pod "PayCardsRecognizer"
+  pod "PopupDialog"
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

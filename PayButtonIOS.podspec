@@ -41,8 +41,8 @@ spec.exclude_files = [
 'PayButton/PayButtonAssets.xcassets/AppIcon.appiconset/**',
 ]
 
-spec.dependency "Alamofire", "~> 5.0.5"
-spec.dependency "PayCardsRecognizer", "~> 1.1.7"
-spec.dependency "PopupDialog", "~> 1.1.1"
+spec.dependency "Alamofire"
+spec.dependency "PayCardsRecognizer"
+spec.dependency "PopupDialog"
 
 end
