@@ -42,8 +42,6 @@ spec.exclude_files = [
 ]
 
 spec.dependency "Alamofire", "~> 5.0.5"
-spec.dependency "DLRadioButton", "~> 1.4.12"
-spec.dependency "MOLH", "~> 1.4.3"
 spec.dependency "PayCardsRecognizer", "~> 1.1.7"
 spec.dependency "PopupDialog", "~> 1.1.1"
 
