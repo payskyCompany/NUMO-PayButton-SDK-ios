@@ -42,12 +42,10 @@ extension UIViewController: UIAlertViewDelegate {
         popupVC.okHandler = okHandler
         popupVC.cancelHandler = cancelHandler
                 
-        // Present popup with the hosted view controller
         let popupVCN = PopupViewController(viewController: popupVC)
         popupVCN.modalPresentationStyle = .overCurrentContext
         popupVCN.modalTransitionStyle = .crossDissolve
                 
-        // Present dialog
         present(popupVCN, animated: true, completion: nil)
     }
     
@@ -55,10 +53,8 @@ extension UIViewController: UIAlertViewDelegate {
 
 class PopupViewController: UIViewController {
 
-    // View Controller to host
     private var hostedViewController: UIViewController
 
-    // Create a popup container view
     private let popupView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -67,13 +63,12 @@ class PopupViewController: UIViewController {
         view.layer.masksToBounds = true
         return view
     }()
-    
-    // Initializer to pass the view controller to host
+
     init(viewController: UIViewController) {
         self.hostedViewController = viewController
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -81,32 +76,26 @@ class PopupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Background settings for the dim effect
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        
-        // Tap outside to dismiss
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissPopup))
         view.addGestureRecognizer(tapGesture)
 
-        // Prevent touches inside the popup view from dismissing the popup
         popupView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: nil))
 
-        // Add popup view and hosted view controller
         view.addSubview(popupView)
-        
-        // Add hosted view controller's view into popup view
+
         addChild(hostedViewController)
         popupView.addSubview(hostedViewController.view)
         hostedViewController.view.translatesAutoresizingMaskIntoConstraints = false
         hostedViewController.didMove(toParent: self)
-        
-        // Popup view constraints
+
         popupView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        popupView.widthAnchor.constraint(equalToConstant: 600).isActive = true
-        popupView.heightAnchor.constraint(equalToConstant: 400).isActive = true // Adjust as necessary
+        popupView.widthAnchor.constraint(equalToConstant: 400).isActive = true
+        popupView.heightAnchor.constraint(greaterThanOrEqualToConstant: 200).isActive = true
+        popupView.heightAnchor.constraint(lessThanOrEqualToConstant: 400).isActive = true
 
-        // Hosted view controller's view constraints to fit inside the popup
         hostedViewController.view.topAnchor.constraint(equalTo: popupView.topAnchor).isActive = true
         hostedViewController.view.bottomAnchor.constraint(equalTo: popupView.bottomAnchor).isActive = true
         hostedViewController.view.leadingAnchor.constraint(equalTo: popupView.leadingAnchor).isActive = true

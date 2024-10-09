@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4797ED69338FCE14B86B7CEC /* Pods_PayButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883B0D8DD8A92DF16952ADA6 /* Pods_PayButton.framework */; };
 		890894D72A327BA400F6317E /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890894D62A327BA400F6317E /* Bundle+version.swift */; };
 		890B8B132A238EA90059DC3F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890B8B122A238EA90059DC3F /* String+Extensions.swift */; };
 		890B8B152A239B190059DC3F /* HMACAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890B8B142A239B190059DC3F /* HMACAlgorithm.swift */; };
@@ -128,24 +127,12 @@
 		FAF480162A41A808005EC676 /* PaymentProcessingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF480142A41A808005EC676 /* PaymentProcessingVC.xib */; };
 		FAF4801A2A41B065005EC676 /* PaymentApprovedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF480182A41B065005EC676 /* PaymentApprovedVC.swift */; };
 		FAF4801B2A41B065005EC676 /* PaymentApprovedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF480192A41B065005EC676 /* PaymentApprovedVC.xib */; };
+		FB76FDC32CB6C23200C192A9 /* Pods_PayButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883B0D8DD8A92DF16952ADA6 /* Pods_PayButton.framework */; };
 		FB8FBA132CA98E590096FB48 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52CDFEE2327BFAC00E0EC74 /* WebKit.framework */; };
 		FBFF02DF2CAD4896007C9447 /* currency_iso.xml in Resources */ = {isa = PBXBuildFile; fileRef = FBFF02DE2CAD4896007C9447 /* currency_iso.xml */; };
 		FBFF02E12CAD48E8007C9447 /* CurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF02E02CAD48E8007C9447 /* CurrencyHelper.swift */; };
 		FBFF02E32CAD5F31007C9447 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF02E22CAD5F31007C9447 /* NumberFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FB8FBA122CA98E4C0096FB48 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		883B0D8DD8A92DF16952ADA6 /* Pods_PayButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8FBA132CA98E590096FB48 /* WebKit.framework in Frameworks */,
-				4797ED69338FCE14B86B7CEC /* Pods_PayButton.framework in Frameworks */,
+				FB76FDC32CB6C23200C192A9 /* Pods_PayButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,7 +768,6 @@
 				C5A4163F2165027F008A93B3 /* Sources */,
 				C5A416402165027F008A93B3 /* Frameworks */,
 				C5A416412165027F008A93B3 /* Resources */,
-				FB8FBA122CA98E4C0096FB48 /* Embed Frameworks */,
 				5C1C55141333EE79A2C89F9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -1155,6 +1141,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "PayButton/PayButton-Bridging-Header.h";
