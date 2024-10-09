@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4797ED69338FCE14B86B7CEC /* Pods_PayButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883B0D8DD8A92DF16952ADA6 /* Pods_PayButton.framework */; };
 		890894D72A327BA400F6317E /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890894D62A327BA400F6317E /* Bundle+version.swift */; };
 		890B8B132A238EA90059DC3F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890B8B122A238EA90059DC3F /* String+Extensions.swift */; };
 		890B8B152A239B190059DC3F /* HMACAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890B8B142A239B190059DC3F /* HMACAlgorithm.swift */; };
@@ -110,7 +111,6 @@
 		C5FD7441222406D8008BD2AE /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD743D222406D8008BD2AE /* CIImageExtension.swift */; };
 		C5FD7442222406D8008BD2AE /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD743E222406D8008BD2AE /* CIColorExtension.swift */; };
 		C5FD7443222406D8008BD2AE /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD743F222406D8008BD2AE /* QRCode.swift */; };
-		E953D9BD2177024D7C8EF476 /* Pods_PayButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A38D0F809E55B0170E15C9B /* Pods_PayButton.framework */; };
 		FA48AFB02A4099D10064C8B1 /* ManageCardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48AFAE2A4099D10064C8B1 /* ManageCardsVC.swift */; };
 		FA48AFB12A4099D10064C8B1 /* ManageCardsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA48AFAF2A4099D10064C8B1 /* ManageCardsVC.xib */; };
 		FA48AFB42A40A34A0064C8B1 /* ManageCardsTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48AFB32A40A34A0064C8B1 /* ManageCardsTableHeader.swift */; };
@@ -129,7 +129,6 @@
 		FAF4801A2A41B065005EC676 /* PaymentApprovedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF480182A41B065005EC676 /* PaymentApprovedVC.swift */; };
 		FAF4801B2A41B065005EC676 /* PaymentApprovedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF480192A41B065005EC676 /* PaymentApprovedVC.xib */; };
 		FB8FBA132CA98E590096FB48 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52CDFEE2327BFAC00E0EC74 /* WebKit.framework */; };
-		FB8FBA172CA98F230096FB48 /* MOLH in Frameworks */ = {isa = PBXBuildFile; productRef = FB8FBA162CA98F230096FB48 /* MOLH */; };
 		FBFF02DF2CAD4896007C9447 /* currency_iso.xml in Resources */ = {isa = PBXBuildFile; fileRef = FBFF02DE2CAD4896007C9447 /* currency_iso.xml */; };
 		FBFF02E12CAD48E8007C9447 /* CurrencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF02E02CAD48E8007C9447 /* CurrencyHelper.swift */; };
 		FBFF02E32CAD5F31007C9447 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF02E22CAD5F31007C9447 /* NumberFormatter+Extensions.swift */; };
@@ -149,8 +148,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		589BE5EA2CB502613D1B9F90 /* Pods-PayButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayButton.release.xcconfig"; path = "Target Support Files/Pods-PayButton/Pods-PayButton.release.xcconfig"; sourceTree = "<group>"; };
-		5A38D0F809E55B0170E15C9B /* Pods_PayButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		883B0D8DD8A92DF16952ADA6 /* Pods_PayButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890894D62A327BA400F6317E /* Bundle+version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
 		890B8B122A238EA90059DC3F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		890B8B142A239B190059DC3F /* HMACAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMACAlgorithm.swift; sourceTree = "<group>"; };
@@ -211,7 +209,8 @@
 		89D4C84C2A5B3E310071966E /* ChangeDefaultTokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDefaultTokenResponse.swift; sourceTree = "<group>"; };
 		89D4C84E2A5B43430071966E /* ManageCardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCardsPresenter.swift; sourceTree = "<group>"; };
 		89F7B7682A263A2500E6333A /* Bundle+swizzleLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+swizzleLocalization.swift"; sourceTree = "<group>"; };
-		B98DF77C0AE16A76393A827A /* Pods-PayButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayButton.debug.xcconfig"; path = "Target Support Files/Pods-PayButton/Pods-PayButton.debug.xcconfig"; sourceTree = "<group>"; };
+		90348AEBC7F604A695F68BBC /* Pods-PayButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayButton.release.xcconfig"; path = "Target Support Files/Pods-PayButton/Pods-PayButton.release.xcconfig"; sourceTree = "<group>"; };
+		B7F5DEB82C5495EEE2D963FE /* Pods-PayButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayButton.debug.xcconfig"; path = "Target Support Files/Pods-PayButton/Pods-PayButton.debug.xcconfig"; sourceTree = "<group>"; };
 		C528E2462166118F00CAFBC4 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		C528E2472166118F00CAFBC4 /* GlobalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalManager.swift; sourceTree = "<group>"; };
 		C528E24B2166118F00CAFBC4 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -290,8 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8FBA132CA98E590096FB48 /* WebKit.framework in Frameworks */,
-				FB8FBA172CA98F230096FB48 /* MOLH in Frameworks */,
-				E953D9BD2177024D7C8EF476 /* Pods_PayButton.framework in Frameworks */,
+				4797ED69338FCE14B86B7CEC /* Pods_PayButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +301,7 @@
 			children = (
 				FB8FBA0C2CA9812F0096FB48 /* MOLH.framework */,
 				C52CDFEE2327BFAC00E0EC74 /* WebKit.framework */,
-				5A38D0F809E55B0170E15C9B /* Pods_PayButton.framework */,
+				883B0D8DD8A92DF16952ADA6 /* Pods_PayButton.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -311,8 +309,8 @@
 		56D5EB78218E2F9E901EE8F4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B98DF77C0AE16A76393A827A /* Pods-PayButton.debug.xcconfig */,
-				589BE5EA2CB502613D1B9F90 /* Pods-PayButton.release.xcconfig */,
+				B7F5DEB82C5495EEE2D963FE /* Pods-PayButton.debug.xcconfig */,
+				90348AEBC7F604A695F68BBC /* Pods-PayButton.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -779,21 +777,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5A4165521650280008A93B3 /* Build configuration list for PBXNativeTarget "PayButton" */;
 			buildPhases = (
-				CA4104390A6695BACF562390 /* [CP] Check Pods Manifest.lock */,
+				D6EAE58F7CED060A1916D018 /* [CP] Check Pods Manifest.lock */,
 				C5A4163F2165027F008A93B3 /* Sources */,
 				C5A416402165027F008A93B3 /* Frameworks */,
 				C5A416412165027F008A93B3 /* Resources */,
 				FB8FBA122CA98E4C0096FB48 /* Embed Frameworks */,
-				D9527C1A743B41FFEB7D348F /* [CP] Embed Pods Frameworks */,
+				5C1C55141333EE79A2C89F9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PayButton;
-			packageProductDependencies = (
-				FB8FBA162CA98F230096FB48 /* MOLH */,
-			);
 			productName = PayButton;
 			productReference = C5A4164321650280008A93B3 /* PayButton.app */;
 			productType = "com.apple.product-type.application";
@@ -825,9 +820,6 @@
 				ar,
 			);
 			mainGroup = C5A4163A2165027F008A93B3;
-			packageReferences = (
-				FB8FBA152CA98F230096FB48 /* XCRemoteSwiftPackageReference "MOLH" */,
-			);
 			productRefGroup = C5A4164421650280008A93B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -863,7 +855,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CA4104390A6695BACF562390 /* [CP] Check Pods Manifest.lock */ = {
+		5C1C55141333EE79A2C89F9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PayButton/Pods-PayButton-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PayButton/Pods-PayButton-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PayButton/Pods-PayButton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6EAE58F7CED060A1916D018 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -883,23 +892,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D9527C1A743B41FFEB7D348F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PayButton/Pods-PayButton-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PayButton/Pods-PayButton-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PayButton/Pods-PayButton-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1173,7 +1165,7 @@
 		};
 		C5A4165621650280008A93B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B98DF77C0AE16A76393A827A /* Pods-PayButton.debug.xcconfig */;
+			baseConfigurationReference = B7F5DEB82C5495EEE2D963FE /* Pods-PayButton.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1190,7 +1182,7 @@
 				);
 				MARKETING_VERSION = 1.2.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.paysky.PayButtonSDK-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = io.paysky.GIMPayButtonSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1200,7 +1192,7 @@
 		};
 		C5A4165721650280008A93B3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 589BE5EA2CB502613D1B9F90 /* Pods-PayButton.release.xcconfig */;
+			baseConfigurationReference = 90348AEBC7F604A695F68BBC /* Pods-PayButton.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1217,7 +1209,7 @@
 				);
 				MARKETING_VERSION = 1.2.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.paysky.PayButtonSDK-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = io.paysky.GIMPayButtonSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1247,25 +1239,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		FB8FBA152CA98F230096FB48 /* XCRemoteSwiftPackageReference "MOLH" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MoathOthman/MOLH";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		FB8FBA162CA98F230096FB48 /* MOLH */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FB8FBA152CA98F230096FB48 /* XCRemoteSwiftPackageReference "MOLH" */;
-			productName = MOLH;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C5A4163B2165027F008A93B3 /* Project object */;
 }

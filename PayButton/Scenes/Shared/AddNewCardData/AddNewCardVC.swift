@@ -8,7 +8,6 @@
 
 import MOLH
 import PayCardsRecognizer
-import PopupDialog
 import UIKit
 
 protocol AddNewCardView: AnyObject {
