@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         MOLH.shared.activate(true)
+        MOLH.setLanguageTo("en")
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let mainView = MainViewController(nibName: "MainViewController", bundle: nil)

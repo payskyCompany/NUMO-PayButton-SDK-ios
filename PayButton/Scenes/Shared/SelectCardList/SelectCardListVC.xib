@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -378,30 +378,30 @@
                                     <rect key="frame" x="0.0" y="110" width="374" height="50"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5BG-T8-FvP">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTD-ZY-F5J">
-                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7N-yO-YjK">
+                                                    <rect key="frame" x="0.0" y="10" width="147" height="30"/>
                                                     <color key="tintColor" name="MainColor"/>
-                                                    <state key="normal" title="Change Language"/>
+                                                    <state key="normal" title="Terms and conditions"/>
                                                     <connections>
-                                                        <action selector="changeLangBtnPressed:" destination="-1" eventType="touchUpInside" id="9Ay-1M-Pas"/>
+                                                        <action selector="termsAndConditionsBtnPressed:" destination="-1" eventType="touchUpInside" id="NMi-xi-9xK"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power_by_paysky" translatesAutoresizingMaskIntoConstraints="NO" id="igb-w8-ABE">
-                                                    <rect key="frame" x="254" y="0.0" width="120" height="30"/>
+                                                    <rect key="frame" x="254" y="0.0" width="120" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="ZMf-TE-i7W"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7N-yO-YjK">
-                                            <rect key="frame" x="0.0" y="30" width="147" height="20"/>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTD-ZY-F5J">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="0.0"/>
                                             <color key="tintColor" name="MainColor"/>
-                                            <state key="normal" title="Terms and conditions"/>
+                                            <state key="normal" title="Change Language"/>
                                             <connections>
-                                                <action selector="termsAndConditionsBtnPressed:" destination="-1" eventType="touchUpInside" id="NMi-xi-9xK"/>
+                                                <action selector="changeLangBtnPressed:" destination="-1" eventType="touchUpInside" id="9Ay-1M-Pas"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -458,7 +458,7 @@
         <image name="power_by_paysky" width="640" height="192.66667175292969"/>
         <image name="three_dots" width="5" height="17"/>
         <namedColor name="MainColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12549019607843137" green="0.20392156862745098" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

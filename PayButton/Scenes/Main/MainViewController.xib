@@ -428,7 +428,7 @@
                         <constraint firstAttribute="width" constant="70" id="vCq-nt-ZjB"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSM-hG-njZ">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSM-hG-njZ">
                     <rect key="frame" x="20" y="932" width="125" height="30"/>
                     <color key="tintColor" name="MainColor"/>
                     <state key="normal" title="Change Language">
