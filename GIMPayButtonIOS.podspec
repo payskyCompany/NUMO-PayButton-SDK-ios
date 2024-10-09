@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 spec.name         = "GIMPayButtonIOS"
-spec.version      = "1.0.2"
+spec.version      = "1.0.3"
 spec.summary      = "GIM PayButton SDK"
 spec.description  = "PayButton SDK helps make the integration of card acceptance into your app easy."
 spec.homepage     = "https://github.com/GIMPAY/paybutton-sdk-ios"
