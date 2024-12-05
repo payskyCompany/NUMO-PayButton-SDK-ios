@@ -11,21 +11,21 @@ import Alamofire
  
 
 public  class PaySkySDKColor {
-
-  public  static var mainBtnColor = Global.hexStringToUIColor("#EAC604")
     
-  public  static let RaduisNumber = CGFloat(4)
-
+    public  static var mainBtnColor = Global.hexStringToUIColor("#EAC604")
+    
+    public  static let RaduisNumber = CGFloat(4)
     
     
-  public  static var fontColor = Global.hexStringToUIColor("#EAC604")
- public   static var secondColorBtn = Global.hexStringToUIColor("#EAC604")
-  public  static var NavColor = Global.hexStringToUIColor("#EAC604")
-
- //      static let NavColor = Global.hexStringToUIColor("#0F2A64")
-
     
-
+    public  static var fontColor = Global.hexStringToUIColor("#EAC604")
+    public   static var secondColorBtn = Global.hexStringToUIColor("#EAC604")
+    public  static var NavColor = Global.hexStringToUIColor("#EAC604")
+    
+    //      static let NavColor = Global.hexStringToUIColor("#0F2A64")
+    
+    
+    
 }
 class Global: NSObject {
 
