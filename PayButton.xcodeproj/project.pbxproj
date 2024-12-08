@@ -91,6 +91,7 @@
 		FB6A437C2D05CD6300F6CE1F /* EVDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A43702D05CD6300F6CE1F /* EVDictionaryExtension.swift */; };
 		FB6A437D2D05CD6300F6CE1F /* EVReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A43732D05CD6300F6CE1F /* EVReflection.swift */; };
 		FB6A437E2D05CD6300F6CE1F /* EVArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A436E2D05CD6300F6CE1F /* EVArrayExtension.swift */; };
+		FB6A43802D05D48B00F6CE1F /* Pods_PayButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6A437F2D05D48B00F6CE1F /* Pods_PayButton.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -186,6 +187,7 @@
 		FB6A43732D05CD6300F6CE1F /* EVReflection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVReflection.swift; sourceTree = "<group>"; };
 		FB6A43742D05CD6300F6CE1F /* EVWorkaroundHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVWorkaroundHelpers.swift; sourceTree = "<group>"; };
 		FB6A43752D05CD6300F6CE1F /* PrintOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOptions.swift; sourceTree = "<group>"; };
+		FB6A437F2D05D48B00F6CE1F /* Pods_PayButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PayButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB6A43802D05D48B00F6CE1F /* Pods_PayButton.framework in Frameworks */,
 				C52CDFEF2327BFAC00E0EC74 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +206,7 @@
 		1ACEE1A58393684F51D11D74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB6A437F2D05D48B00F6CE1F /* Pods_PayButton.framework */,
 				C52CDFEE2327BFAC00E0EC74 /* WebKit.framework */,
 				82648C6B436159015F44CEEE /* Pods_PayButton.framework */,
 			);
