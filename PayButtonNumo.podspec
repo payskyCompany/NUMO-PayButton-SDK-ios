@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
            s.platform = :osx, '10.7'
            s.platform = :ios, '8.0'
 
-           s.ios.deployment_target = '11.0'
+           s.ios.deployment_target = '13.0'
     	s.framework = "UIKit"
 
    s.swift_version = '4.2'
@@ -43,7 +43,6 @@ Pod::Spec.new do |s|
   s.dependency 'Alamofire', '~> 5.0.5'
   s.dependency 'EVReflection', '~> 5.10.1'
   s.dependency 'PayCardsRecognizer', '~> 1.1.7'
-  s.dependency 'PopupDialog', '~> 1.1.1'
   s.dependency 'MOLH', '~> 1.4.1'
  
 
