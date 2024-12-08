@@ -7,30 +7,21 @@
 //
 
 import UIKit
-import PopupDialog
+
 class QRTableViewCell: BaseUITableViewCell {
 
     @IBOutlet weak var ScanQrLabel: UILabel!
-    
     @IBOutlet weak var CantScanLabel: UILabel!
-    
-    
     @IBOutlet weak var QrImage: UIImageView!
-    
     @IBOutlet weak var QrLabelCenter: UILabel!
-    
     @IBOutlet weak var requestBtn: UIButton!
-    
-
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
        
         self.backgroundColor = UIColor.clear
-            
-        
-        
+          
         requestBtn.layer.cornerRadius = PaySkySDKColor.RaduisNumber
         QrLabelCenter.text =  "or".localizedPaySky()
 
@@ -44,11 +35,7 @@ class QRTableViewCell: BaseUITableViewCell {
         requestBtn.titleLabel?.adjustsFontSizeToFitWidth = true
 
     }
-    
-    
-    
-  
-
+ 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -59,36 +46,18 @@ class QRTableViewCell: BaseUITableViewCell {
         
         let popupVC = RequestMoneyViewController(nibName: "RequestMoneyViewController", bundle: nil)
  
-        
         popupVC.SendHandler = { (base) in
-            
             if base.Success {
                 popupVC.dismiss(animated: true, completion: {
                     UIApplication.topViewController()?.view.makeToast(
                         "request_send_to_mobile".localizedPaySky()
                     )
                 })
-                
-  
-
+            } else{
+                UIApplication.topViewController()?.showAlert("error".localizedPaySky(), message: base.Message)
             }
-
-            
         }
-        
 
-        
-        let popup = PopupDialog(viewController: popupVC, buttonAlignment: .horizontal, transitionStyle: .bounceDown, preferredWidth: 600, tapGestureDismissal: true)
-        
-   
-        UIApplication.topViewController()?.present(popup, animated: true, completion: nil)
-        
-        
-
-        
     }
-    
-    
-    
-    
+   
 }

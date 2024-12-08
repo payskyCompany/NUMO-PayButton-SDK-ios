@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import Foundation
-import EVReflection
+
 public class QrGenratorResponse: BaseResponse {
 
     var ISOQR: String = ""

@@ -7,10 +7,8 @@
 //
 
 import Foundation
-import EVReflection
 
 public class SmsPaymentRequest: BaseResponse {
-    
     
     var MobileNumber = ""
     var Amount = MainScanViewController.paymentData.amount

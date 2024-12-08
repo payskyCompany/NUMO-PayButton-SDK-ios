@@ -10,10 +10,9 @@
 import UIKit
 import MOLH
 import PayCardsRecognizer
+import AVFoundation
 //CardIOPaymentViewControllerDelegate
 
-import PopupDialog
-import AVFoundation
 class CardTableViewCell: BaseUITableViewCell , MaskedTextFieldDelegateListener ,
 ScanCardtDelegate  {
     

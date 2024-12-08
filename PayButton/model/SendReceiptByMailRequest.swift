@@ -7,18 +7,11 @@
 //
 
 import Foundation
-import EVReflection
 
 public class SendReceiptByMailRequest: BaseResponse {
-    
-
     var EmailTo = ""
     var ExternalReceiptNumber = ""
     var ExternalReceiptNo = ""
     var TransactionId = ""
     var TransactionChannel = ""
-
-    
-    
-    
 }

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import EVReflection
 
 public class ManualPaymentRequest: BaseResponse {
     var ThreeDSECI = ""
@@ -25,7 +24,5 @@ public class ManualPaymentRequest: BaseResponse {
     var ReturnURL = ApiURL.MAIN_API_LINK.replacingOccurrences(of: "/Cube/PayLink.svc/api/", with: "")
     var MerchantReference = MainScanViewController.paymentData.refnumber
     var SystemTraceNr = MainScanViewController.paymentData.refnumber
-    
-   
-    
+ 
 }
