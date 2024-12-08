@@ -37,19 +37,16 @@ Pod::Spec.new do |s|
            s.ios.deployment_target = '13.0'
     	s.framework = "UIKit"
 
-   s.swift_version = '4.2'
+  s.swift_version = '4.2'
 
 
   s.dependency 'Alamofire', '~> 5.0.5'
-  s.dependency 'EVReflection', '~> 5.10.1'
   s.dependency 'PayCardsRecognizer', '~> 1.1.7'
   s.dependency 'MOLH', '~> 1.4.1'
- 
-
       
 
-      s.static_framework = true
- s.requires_arc = true
+  s.static_framework = true
+  s.requires_arc = true
       # 8
   s.source_files = "PayButton/**/*.{swift,h,m}"
 

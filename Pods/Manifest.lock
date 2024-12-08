@@ -1,30 +1,24 @@
 PODS:
   - Alamofire (5.0.5)
-  - EVReflection (5.10.1):
-    - EVReflection/Core (= 5.10.1)
-  - EVReflection/Core (5.10.1)
   - MOLH (1.3)
   - PayCardsRecognizer (1.1.7)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
-  - EVReflection
   - MOLH
   - PayCardsRecognizer
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - EVReflection
     - MOLH
     - PayCardsRecognizer
 
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
-  EVReflection: 8124de482178d34ccd56473e16cd95990f9a1113
   MOLH: a31ef0b87351074d81253606a96b290f9eca161a
   PayCardsRecognizer: 2e4d1b2fdd5f1528fb56064a91e1d58a1af7a2db
 
-PODFILE CHECKSUM: 3f15e9f18670e1540eb4fff7bef2ed3899d50ebf
+PODFILE CHECKSUM: dd96d64fb51cc1a4e19ea567d3f4d9b38d5a80ea
 
 COCOAPODS: 1.15.2

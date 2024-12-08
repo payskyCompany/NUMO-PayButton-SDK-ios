@@ -6,7 +6,6 @@
 //  Copyright © 2018 Paysky. All rights reserved.
 //
 
-import EVReflection
 import Foundation
 
 public class BaseResponse: EVObject {

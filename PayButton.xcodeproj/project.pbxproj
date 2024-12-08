@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0470F7A1275D254900CE4F46 /* UrlTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F7A0275D254900CE4F46 /* UrlTypes.swift */; };
+		5DAD138D71D7A0FF93649582 /* Pods_PayButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82648C6B436159015F44CEEE /* Pods_PayButton.framework */; };
 		C5190553216FA17600664149 /* WebViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5190552216FA17600664149 /* WebViewTableViewCell.xib */; };
 		C528E24C2166118F00CAFBC4 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C528E2462166118F00CAFBC4 /* Extentions.swift */; };
 		C528E24D2166118F00CAFBC4 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C528E2472166118F00CAFBC4 /* Global.swift */; };
@@ -81,6 +82,16 @@
 		C5FD7441222406D8008BD2AE /* CIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD743D222406D8008BD2AE /* CIImageExtension.swift */; };
 		C5FD7442222406D8008BD2AE /* CIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD743E222406D8008BD2AE /* CIColorExtension.swift */; };
 		C5FD7443222406D8008BD2AE /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD743F222406D8008BD2AE /* QRCode.swift */; };
+		FB6A436C2D05CD4900F6CE1F /* ConversionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A436B2D05CD4900F6CE1F /* ConversionOptions.swift */; };
+		FB6A43762D05CD6300F6CE1F /* EVWorkaroundHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A43742D05CD6300F6CE1F /* EVWorkaroundHelpers.swift */; };
+		FB6A43772D05CD6300F6CE1F /* PrintOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A43752D05CD6300F6CE1F /* PrintOptions.swift */; };
+		FB6A43782D05CD6300F6CE1F /* EVCustomReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A436F2D05CD6300F6CE1F /* EVCustomReflectable.swift */; };
+		FB6A43792D05CD6300F6CE1F /* DeserializationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A436D2D05CD6300F6CE1F /* DeserializationStatus.swift */; };
+		FB6A437A2D05CD6300F6CE1F /* EVObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A43712D05CD6300F6CE1F /* EVObject.swift */; };
+		FB6A437B2D05CD6300F6CE1F /* EVReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A43722D05CD6300F6CE1F /* EVReflectable.swift */; };
+		FB6A437C2D05CD6300F6CE1F /* EVDictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A43702D05CD6300F6CE1F /* EVDictionaryExtension.swift */; };
+		FB6A437D2D05CD6300F6CE1F /* EVReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A43732D05CD6300F6CE1F /* EVReflection.swift */; };
+		FB6A437E2D05CD6300F6CE1F /* EVArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A436E2D05CD6300F6CE1F /* EVArrayExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +177,16 @@
 		C5FD743E222406D8008BD2AE /* CIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIColorExtension.swift; sourceTree = "<group>"; };
 		C5FD743F222406D8008BD2AE /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		E4CE234F718E3810DD166BBA /* Pods-PayButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayButton.release.xcconfig"; path = "Target Support Files/Pods-PayButton/Pods-PayButton.release.xcconfig"; sourceTree = "<group>"; };
+		FB6A436B2D05CD4900F6CE1F /* ConversionOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionOptions.swift; sourceTree = "<group>"; };
+		FB6A436D2D05CD6300F6CE1F /* DeserializationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeserializationStatus.swift; sourceTree = "<group>"; };
+		FB6A436E2D05CD6300F6CE1F /* EVArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVArrayExtension.swift; sourceTree = "<group>"; };
+		FB6A436F2D05CD6300F6CE1F /* EVCustomReflectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVCustomReflectable.swift; sourceTree = "<group>"; };
+		FB6A43702D05CD6300F6CE1F /* EVDictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVDictionaryExtension.swift; sourceTree = "<group>"; };
+		FB6A43712D05CD6300F6CE1F /* EVObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVObject.swift; sourceTree = "<group>"; };
+		FB6A43722D05CD6300F6CE1F /* EVReflectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVReflectable.swift; sourceTree = "<group>"; };
+		FB6A43732D05CD6300F6CE1F /* EVReflection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVReflection.swift; sourceTree = "<group>"; };
+		FB6A43742D05CD6300F6CE1F /* EVWorkaroundHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EVWorkaroundHelpers.swift; sourceTree = "<group>"; };
+		FB6A43752D05CD6300F6CE1F /* PrintOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52CDFEF2327BFAC00E0EC74 /* WebKit.framework in Frameworks */,
+				5DAD138D71D7A0FF93649582 /* Pods_PayButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +223,7 @@
 		C528E2452166118F00CAFBC4 /* utilti */ = {
 			isa = PBXGroup;
 			children = (
+				FB6A436A2D05CBA100F6CE1F /* EVReflection */,
 				C528E2462166118F00CAFBC4 /* Extentions.swift */,
 				C528E2472166118F00CAFBC4 /* Global.swift */,
 				C528E2492166118F00CAFBC4 /* ApiManger.swift */,
@@ -443,6 +466,23 @@
 			path = QRCode;
 			sourceTree = "<group>";
 		};
+		FB6A436A2D05CBA100F6CE1F /* EVReflection */ = {
+			isa = PBXGroup;
+			children = (
+				FB6A436B2D05CD4900F6CE1F /* ConversionOptions.swift */,
+				FB6A436D2D05CD6300F6CE1F /* DeserializationStatus.swift */,
+				FB6A436E2D05CD6300F6CE1F /* EVArrayExtension.swift */,
+				FB6A436F2D05CD6300F6CE1F /* EVCustomReflectable.swift */,
+				FB6A43702D05CD6300F6CE1F /* EVDictionaryExtension.swift */,
+				FB6A43712D05CD6300F6CE1F /* EVObject.swift */,
+				FB6A43722D05CD6300F6CE1F /* EVReflectable.swift */,
+				FB6A43732D05CD6300F6CE1F /* EVReflection.swift */,
+				FB6A43742D05CD6300F6CE1F /* EVWorkaroundHelpers.swift */,
+				FB6A43752D05CD6300F6CE1F /* PrintOptions.swift */,
+			);
+			path = EVReflection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -576,6 +616,7 @@
 				C5FD7434222405D3008BD2AE /* UITextView.swift in Sources */,
 				C5F5D821216664490090E5FF /* MainScanViewController.swift in Sources */,
 				C5B900EB2168F0B500301C13 /* CompleteTableViewCell.swift in Sources */,
+				FB6A436C2D05CD4900F6CE1F /* ConversionOptions.swift in Sources */,
 				C537888A216CF24B0058CAC8 /* Compose3DSTransactionResponse.swift in Sources */,
 				C5FD7436222405D3008BD2AE /* AffinityCalculationStrategy.swift in Sources */,
 				C5FD7426222405D3008BD2AE /* State.swift in Sources */,
@@ -619,6 +660,15 @@
 				C5FD7443222406D8008BD2AE /* QRCode.swift in Sources */,
 				C528E24C2166118F00CAFBC4 /* Extentions.swift in Sources */,
 				C5DB913D216B7CA900C69497 /* QrGenratorResponse.swift in Sources */,
+				FB6A43762D05CD6300F6CE1F /* EVWorkaroundHelpers.swift in Sources */,
+				FB6A43772D05CD6300F6CE1F /* PrintOptions.swift in Sources */,
+				FB6A43782D05CD6300F6CE1F /* EVCustomReflectable.swift in Sources */,
+				FB6A43792D05CD6300F6CE1F /* DeserializationStatus.swift in Sources */,
+				FB6A437A2D05CD6300F6CE1F /* EVObject.swift in Sources */,
+				FB6A437B2D05CD6300F6CE1F /* EVReflectable.swift in Sources */,
+				FB6A437C2D05CD6300F6CE1F /* EVDictionaryExtension.swift in Sources */,
+				FB6A437D2D05CD6300F6CE1F /* EVReflection.swift in Sources */,
+				FB6A437E2D05CD6300F6CE1F /* EVArrayExtension.swift in Sources */,
 				C5B900E72168E7F000301C13 /* QRTableViewCell.swift in Sources */,
 				C5B900F0216918F500301C13 /* RequestMoneyViewController.swift in Sources */,
 				C5FD7435222405D3008BD2AE /* CaretStringIterator.swift in Sources */,
