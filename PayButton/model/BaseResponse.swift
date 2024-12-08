@@ -9,6 +9,7 @@
 import Foundation
 
 public class BaseResponse: EVObject {
+    
     let IsMobileSDK = true
     
     public    var Success = false;

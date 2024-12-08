@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0470F7A1275D254900CE4F46 /* UrlTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470F7A0275D254900CE4F46 /* UrlTypes.swift */; };
-		5DAD138D71D7A0FF93649582 /* Pods_PayButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82648C6B436159015F44CEEE /* Pods_PayButton.framework */; };
 		C5190553216FA17600664149 /* WebViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5190552216FA17600664149 /* WebViewTableViewCell.xib */; };
 		C528E24C2166118F00CAFBC4 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C528E2462166118F00CAFBC4 /* Extentions.swift */; };
 		C528E24D2166118F00CAFBC4 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C528E2472166118F00CAFBC4 /* Global.swift */; };
@@ -195,7 +194,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52CDFEF2327BFAC00E0EC74 /* WebKit.framework in Frameworks */,
-				5DAD138D71D7A0FF93649582 /* Pods_PayButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
