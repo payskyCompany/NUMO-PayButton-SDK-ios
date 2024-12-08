@@ -1,16 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'PayButtonNumo'
-  s.version          = '1.1.6'
+  s.version          = '1.1.7'
   s.summary          = 'PayButtonNumo'
- 
   s.description      = "PayButton Moamalat Numo"
-
-
   s.homepage         = 'https://github.com/payskyCompany/NUMO-PayButton-SDK-ios'
- 
   s.license = { :type => 'MIT', :file => 'README.md' }
-
-
   s.author           = { 'payskyCompany' => 'ahmed.agamy@paysky.io' }
   s.source           = { :git => 'https://github.com/payskyCompany/NUMO-PayButton-SDK-ios.git', :tag => s.version.to_s }
  
@@ -32,18 +26,15 @@ Pod::Spec.new do |s|
      'PayButton/Assets.xcassets/AppIcon.appiconset/**',
                          ]
            s.platform = :osx, '10.7'
-           s.platform = :ios, '8.0'
+           s.platform = :ios, '13.0'
 
            s.ios.deployment_target = '13.0'
     	s.framework = "UIKit"
 
-  s.swift_version = '4.2'
-
-
+  s.swift_version = '5.0'
   s.dependency 'Alamofire', '~> 5.0.5'
   s.dependency 'PayCardsRecognizer', '~> 1.1.7'
   s.dependency 'MOLH', '~> 1.4.1'
-      
 
   s.static_framework = true
   s.requires_arc = true
