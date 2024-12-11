@@ -1,9 +1,9 @@
-<p align="center"><a href="https://www.gim-uemoa.org/" target="_blank"><img width="440" src="https://i.ibb.co/0FTNnDb/83ac8f45c38ae9af0b22cfaace84c18362b95a8e7db0622f196a78b85f23ecec.png"></a></p>
+<p align="center"><a href="https://paysky.io/" target="_blank"><img width="440" src="https://i.ibb.co/XDXPgzQ/logo-moamalat-3x.png"></a></p>
 
-# GIM PayButton SDK
+# NUMO PayButton SDK
 The PayButton helps make the integration of card acceptance into your app easy.
 
-You simply provide the merchant information you receieve from GIM to the payment SDK. The PayButton displays a ready-made view that guides the merchant through the payment process and shows a summary screen at the end of the transaction.
+You simply provide the merchant information you receive from NUMO to the payment SDK. The PayButton displays a ready-made view that guides the merchant through the payment process and shows a summary screen at the end of the transaction.
 
 ### Getting Started
 
@@ -21,7 +21,7 @@ pod init
 3. Add the pod to your Podfile:
 **Open Podfile** with any text editor tool then add the next line inside "target 'PayButton' do "scoop 
 ```
-pod 'GIMPayButtonIOS'
+pod 'NUMOPayButtonIOS'
 ```
 4. Open the terminal and run
 ```
@@ -57,7 +57,7 @@ DerivedData/TestPayButton-ghdftwdswnoxgexfnpfxqmwsgah/Build/Products/
 Debug-iphonesimulator/TestPayButton.app/Assets.car'
  ```
  <br />
-Place disable_input_output_paths: true in Podfile, to skip optimisation and always download resources from Pods cleanly every time, since it is not copying bundled assets during build. Adding extra overhead to build doesn't seem optimal, and leads to bad experience during local App development
+Place disable_input_output_paths: true in Podfile, to skip optimisations and always download resources from Pods cleanly every time, since it is not copying bundled assets during build. Adding extra overhead to build doesn't seem optimal, and leads to bad experience during local App development
 
 ```
 # Podfile
@@ -65,16 +65,16 @@ Place disable_input_output_paths: true in Podfile, to skip optimisation and alwa
 install! 'cocoapods', :disable_input_output_paths => true
 ```
 ## 🚀 Deployment
-1. Before deploying your project live, you should get a merchant ID and terminal ID provided by GIM.
+1. Before deploying your project live, you should get a merchant ID and terminal ID provided by NUMO.
 2. You should keep your merchant ID and terminal ID **secured** in your project, **encrypt** them before save them in project.
 
 ## 🛠 How to use
-In order to use the SDK you should use a production merchantId, terminalId and secure_hash key provided by GIM.
+In order to use the SDK you should use a production merchantId, terminalId and secure_hash key provided by NUMO.
 
 ### 👉 Usage/Examples 
-In the class you want to intiate the payment from, you should import the framework
+In the class you want to initiate the payment from, you should import the framework
 ```swift
-import GIMPayButtonIOS
+import NUMOPayButtonIOS
 ```
 
 After the import, create a new instance from PayButton
@@ -83,13 +83,13 @@ let paymentViewController = PaymentViewController(
                 merchantId: "merchantId", //Mandatory
                 terminalId: "terminalId", //Mandatory
                 amount: 100.0, //Mandatory - provide the amount and currency with it's decimal factor
-                currencyCode: 0, //Mandatory - Provided by GIM
-                secureHashKey: "secure_hash",//Mandatory - Provided by GIM
-                trnxRefNumber: "", //Optinal (remove it if not use), Provided by GIM
-                customerId: "", //Optinal (remove it if not use), Provided by GIM
-                customerMobile: "", //Optinal (remove it if not use), Provided by GIM
-                customerEmail: "", //Optinal (remove it if not use), Provided by GIM
-                isProduction: false //Choose the needed inviroment
+                currencyCode: 0, //Mandatory - Provided by NUMO
+                secureHashKey: "secure_hash",//Mandatory - Provided by NUMO
+                trnxRefNumber: "", //Optional (remove it if not use), Provided by NUMO
+                customerId: "", //Optional (remove it if not use), Provided by NUMO
+                customerMobile: "", //Optional (remove it if not use), Provided by NUMO
+                customerEmail: "", //Optional (remove it if not use), Provided by NUMO
+                isProduction: false //Choose the needed environment
             )
 ```
 
@@ -103,7 +103,7 @@ In order to create transaction callback in delegate PaymentDelegate, implement d
 
 ```swift 
 extension ViewController: PayButtonDelegate {
-     func finishedSdkPayment(_ response: GIMPayButtonIOS.PayByCardReponse) {
+     func finishedSdkPayment(_ response: NUMOPayButtonIOS.PayByCardReponse) {
         if response.success == true {
             print("Transaction completed successfully")
             print(response.networkReference ?? "") // reference number of transaction.
@@ -138,4 +138,4 @@ extension ViewController: PayButtonDelegate {
 
 
 ## 👀 Demo
-[iOS Sample Project](https://github.com/GIMPAY/paybutton-sdk-ios-example.git)
+[iOS Sample Project](https://github.com/payskyCompany/NUMO-PayButton-SDK-ios-example.git)

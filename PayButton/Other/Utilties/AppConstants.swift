@@ -36,7 +36,6 @@ public class PaymentParams {
 }
 
 public class ApiURL {
-    static var MAIN_API_LINK = "https://grey.paysky.io/Cube/PayLink.svc/api/"
     static var GenerateQR = "GenerateQR"
     static var CheckTxnStatus = "CheckTxnStatus"
     static var SendReceiptToEmail = "SendReceiptToEmail"

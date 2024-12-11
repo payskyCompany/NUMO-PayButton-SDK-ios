@@ -159,7 +159,7 @@ class MainViewController: UIViewController {
         currencyCodeLabel.text = "currency_code".localizedString()
         trnxRefNumberLabel.text = "ref_number".localizedString()
         changeLangBtn.setTitle("change_lang".localizedString(), for: .normal)
-        submitBtn.setTitle("submit".localizedString(), for: .normal)
+        submitBtn.setTitle("pay_now".localizedString(), for: .normal)
         submitBtn.layer.cornerRadius = AppConstants.radiusNumber
         setupSubmitBtnUI()
     }
