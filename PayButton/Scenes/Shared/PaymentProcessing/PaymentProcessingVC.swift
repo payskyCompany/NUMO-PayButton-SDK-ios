@@ -8,7 +8,7 @@
 
 import MOLH
 import UIKit
-import WebKit
+@preconcurrency import WebKit
 
 protocol PaymentProcessingView: AnyObject {
     func loadWebView(withURL url: URL)
@@ -48,51 +48,70 @@ class PaymentProcessingVC: UIViewController, WKNavigationDelegate {
         paymentWKWebView.contentMode = .scaleAspectFill
         paymentWKWebView.scrollView.zoomScale = 2.0
     }
-
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        webView.showLoadingIndicator()
-        
-        guard let url = webView.url?.absoluteString else {
-            return
-        }
-        if url.contains(AppConstants.DOMAIN_URL) && url.contains("Success") {
-            debugPrint("new page url = \(url)")
-            webView.hideLoadingIndicator()
-            
-            if webView.url?.queryDictionary?["Success"] == "True" {
-                debugPrint(webView.url?.queryDictionary ?? "")
-                var jsonObj: [String: Any] = [
-                    "Message": webView.url?.queryDictionary?["Message"] as String? ?? "",
-                    "ActionCode": webView.url?.queryDictionary?["ActionCode"] as String? ?? "",
-                    "AuthCode": webView.url?.queryDictionary?["AuthCode"] as String? ?? "",
-                    "MerchantReference": webView.url?.queryDictionary?["MerchantReference"] as String? ?? "",
-                    "NetworkReference": webView.url?.queryDictionary?["NetworkReference"] as String? ?? "",
-                    "ReceiptNumber": webView.url?.queryDictionary?["ReceiptNumber"] as String? ?? "",
-                    "TokenCustomerId": MerchantDataManager.shared.merchant.customerId,
-                ]
-                jsonObj["SystemReference"] = Int(webView.url?.queryDictionary?["SystemReference"] ?? "0")
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let url = navigationAction.request.url {
+            if url.absoluteString.contains(AppConstants.DOMAIN_URL) && url.absoluteString.contains("Success") {
+                debugPrint("new page url = \(url)")
+                webView.hideLoadingIndicator()
+                
                 if webView.url?.queryDictionary?["Success"] == "True" {
-                    jsonObj["Success"] = true
-                } else {
-                    jsonObj["Success"] = false
-                }
-                if let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj, options: []) {
-                    do {
-                        let response = try JSONDecoder().decode(PayByCardReponse.self, from: jsonData)
-                        navigateToPaymentApprovedView(withTrxnResponse: response)
-                    } catch let error {
-                        showErrorAlertView(withMessage: error.localizedDescription)
+                    debugPrint(webView.url?.queryDictionary ?? "")
+                    var jsonObj: [String: Any] = [
+                        "Message": webView.url?.queryDictionary?["Message"] as String? ?? "",
+                        "ActionCode": webView.url?.queryDictionary?["ActionCode"] as String? ?? "",
+                        "AuthCode": webView.url?.queryDictionary?["AuthCode"] as String? ?? "",
+                        "MerchantReference": webView.url?.queryDictionary?["MerchantReference"] as String? ?? "",
+                        "NetworkReference": webView.url?.queryDictionary?["NetworkReference"] as String? ?? "",
+                        "ReceiptNumber": webView.url?.queryDictionary?["ReceiptNumber"] as String? ?? "",
+                        "TokenCustomerId": MerchantDataManager.shared.merchant.customerId,
+                    ]
+                    jsonObj["SystemReference"] = Int(webView.url?.queryDictionary?["SystemReference"] ?? "0")
+                    if webView.url?.queryDictionary?["Success"] == "True" {
+                        jsonObj["Success"] = true
+                    } else {
+                        jsonObj["Success"] = false
                     }
+                    if let jsonData = try? JSONSerialization.data(withJSONObject: jsonObj, options: []) {
+                        do {
+                            let response = try JSONDecoder().decode(PayByCardReponse.self, from: jsonData)
+                            navigateToPaymentApprovedView(withTrxnResponse: response)
+                        } catch let error {
+                            showErrorAlertView(withMessage: error.localizedDescription)
+                        }
+                    }
+                } else if webView.url?.queryDictionary?["Success"] == "False" {
+                    showErrorAlertView(withMessage: webView.url?.queryDictionary?["Message"] ?? "")
                 }
-            } else if webView.url?.queryDictionary?["Success"] == "False" {
-                showErrorAlertView(withMessage: webView.url?.queryDictionary?["Message"] ?? "")
+                
+                decisionHandler(.cancel)
+                return
             }
         }
+        decisionHandler(.allow)
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         webView.isHidden = false
         webView.hideLoadingIndicator()
+        
+        webView.evaluateJavaScript("document.documentElement.outerHTML.toString()") { (html, error) in
+            if let htmlContent = html as? String, htmlContent.contains("HTTP Status - 400") {
+                let errorMessage = self.extractErrorMessage(from: htmlContent)
+                self.showErrorAlertView(withMessage: errorMessage)
+            }
+        }
+    }
+    
+    func extractErrorMessage(from html: String) -> String {
+        var message = ""
+        if let range = html.range(of: "E5000:") {
+            let startIndex = range.upperBound
+            if let endIndex = html[startIndex...].range(of: "\\u003C")?.lowerBound {
+                message = String(html[startIndex..<endIndex])
+            }
+        }
+        return message
     }
 
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -150,11 +169,10 @@ extension PaymentProcessingVC {
         
         if let currencyCode = CurrencyHelper().getCurrencyCode(currencyCode: String(MerchantDataManager.shared.merchant.currencyCode)) {
             amountValueLbl.text = "\(currencyCode.currencyShortName)"
-            + " " + String(MerchantDataManager.shared.merchant.amount.rounded(.towardZero))
+            + " " + NumberFormatter.formatAmount(MerchantDataManager.shared.merchant.amount)
         } else {
-            amountValueLbl.text = "Error"
-//            amountValueLbl.text = "\(MerchantDataManager.shared.merchant.currencyCode)".localizedString()
-//            + " " + String(MerchantDataManager.shared.merchant.amount.rounded(.towardZero))
+            amountValueLbl.text = "\(MerchantDataManager.shared.merchant.currencyCode)".localizedString()
+            + " " + NumberFormatter.formatAmount(MerchantDataManager.shared.merchant.amount)
         }
 
         changeLangBtn.setTitle("change_lang".localizedString(), for: .normal)

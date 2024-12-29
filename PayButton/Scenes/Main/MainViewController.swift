@@ -126,23 +126,8 @@ class MainViewController: UIViewController {
     }
 
     private func setupSubmitBtnUI() {
-        if subscriptionTypeSegmentedControl.selectedSegmentIndex == 0 {
-            if let channel = selectChannelTextfield.text, !channel.isEmpty {
-                submitBtn.isEnabled = true
-                submitBtn.backgroundColor = .mainColor
-            } else {
-                submitBtn.isEnabled = false
-                submitBtn.backgroundColor = .lightGray
-            }
-        } else {
-            if let customerId = customerIdTextfield.text, !customerId.isEmpty {
-                submitBtn.isEnabled = true
-                submitBtn.backgroundColor = .mainColor
-            } else {
-                submitBtn.isEnabled = false
-                submitBtn.backgroundColor = .lightGray
-            }
-        }
+        submitBtn.isEnabled = true
+        submitBtn.backgroundColor = .mainColor
     }
 
     private func setupViewOutlets() {
@@ -235,23 +220,15 @@ class MainViewController: UIViewController {
 
         // Check if "Not Subscribed" is selected
         if subscriptionTypeSegmentedControl.selectedSegmentIndex == 0 {
-            guard let channel = selectChannelTextfield.text, !channel.isEmpty else {
-                UIApplication.topViewController()?.view.makeToast("please_select_channel".localizedString())
-                return
-            }
             // Check if channel selected is "Mobile number" else "Email Address"
             if selectChannelPickerView.selectedRow(inComponent: 0) == 0 {
-                guard let mobileNumber = mobileNumberTextfield.text, !mobileNumber.isEmpty else {
-                    UIApplication.topViewController()?.view.makeToast("please_enter_mobile_number".localizedString())
-                    return
-                }
                 let paymentViewController = PaymentViewController(merchantId: merchantId,
                                                                   terminalId: terminalId,
-                                                                  amount: Double(amount) ?? 0.00,
+                                                                  amount: (Double(amount) ?? 0.00) * 1000,
                                                                   currencyCode: Int(currencyCode) ?? AppConstants.selectedCountryCode,
                                                                   secureHashKey: secureHashKey,
                                                                   trnxRefNumber: trnxRefNumberTextfield.text ?? "",
-                                                                  customerMobile: mobileNumber,
+                                                                  customerMobile: "",
                                                                   isProduction: selectUrlEnvironmentPicker.selectedRow(inComponent: 0) == 0)
                 paymentViewController.delegate = self
                 paymentViewController.pushViewController()
@@ -262,7 +239,7 @@ class MainViewController: UIViewController {
                 }
                 let paymentViewController = PaymentViewController(merchantId: merchantId,
                                                                   terminalId: terminalId,
-                                                                  amount: Double(amount) ?? 0.00,
+                                                                  amount: (Double(amount) ?? 0.00) * 1000,
                                                                   currencyCode: Int(currencyCode) ?? AppConstants.selectedCountryCode,
                                                                   secureHashKey: secureHashKey,
                                                                   trnxRefNumber: trnxRefNumberTextfield.text ?? "",
@@ -278,7 +255,7 @@ class MainViewController: UIViewController {
             }
             let paymentViewController = PaymentViewController(merchantId: merchantId,
                                                               terminalId: terminalId,
-                                                              amount: Double(amount) ?? 0.00,
+                                                              amount: (Double(amount) ?? 0.00) * 1000,
                                                               currencyCode: Int(currencyCode) ?? AppConstants.selectedCountryCode,
                                                               secureHashKey: secureHashKey,
                                                               trnxRefNumber: trnxRefNumberTextfield.text ?? "",

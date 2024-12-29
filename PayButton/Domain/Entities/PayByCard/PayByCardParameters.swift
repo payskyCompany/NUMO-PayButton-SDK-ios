@@ -51,8 +51,8 @@ struct PayByCardParameters {
         cardAcceptorTerminalId = terminalId
         pan = cardNumber
         dateExpiration = expiryDate
-        cvv2 = cvv
-        isFromPOS = false
+        cvv2 = ""
+        isFromPOS = true
         isWebRequest = true
         isMobileSDK = true
         returnURL = AppConstants.DOMAIN_URL
@@ -74,7 +74,6 @@ struct PayByCardParameters {
         dictionary["TerminalId"] = terminalId
         dictionary["SecureHash"] = secureHash
         dictionary["DateTimeLocalTrxn"] = dateTimeLocalTrxn
-        dictionary["CardHolderName"] = cardHolderName
         dictionary["cvv2"] = cvv2
         dictionary["CardAcceptorIDcode"] = cardAcceptorIdCode
         dictionary["CardAcceptorTerminalID"] = cardAcceptorTerminalId
@@ -85,11 +84,7 @@ struct PayByCardParameters {
         dictionary["ReturnURL"] = returnURL
         dictionary["IsWebRequest"] = isWebRequest
         dictionary["IsMobileSDK"] = isMobileSDK
-        dictionary["IsDefaultCard"] = isDefaultCard
-        dictionary["IsSaveCard"] = isSaveCard
-        dictionary["MobileNo"] = customerMobileNo
-        dictionary["Email"] = customerEmail
-        dictionary["TokenCustomerId"] = tokenCustomerId
+        dictionary["Success"] = false
         dictionary["TokenCustomerSession"] = tokenCustomerSession
         return dictionary
     }
