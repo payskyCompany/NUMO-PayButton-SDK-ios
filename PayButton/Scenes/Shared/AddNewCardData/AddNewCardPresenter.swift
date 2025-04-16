@@ -88,7 +88,7 @@ class AddNewCardPresenter: AddNewCardPresenterProtocol {
                         }
                     } else {
                         // if the executed transaction action code is not equal to 00
-                        if response.actionCode == nil || response.actionCode?.isEmpty == true || !(response.actionCode == "000") {
+                        if response.actionCode == nil || response.actionCode?.isEmpty == true || !(response.actionCode == "00") {
                             // transaction failed
                             view?.showErrorAlertView(withMessage: String(response.message ?? ""))
                         } else {

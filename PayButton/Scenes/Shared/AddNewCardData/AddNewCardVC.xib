@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -23,6 +23,7 @@
                 <outlet property="cardNumberTF" destination="OwK-Sa-Pqc" id="h74-0u-PgX"/>
                 <outlet property="changeLangBtn" destination="o7p-Z4-Khw" id="tBv-K2-leR"/>
                 <outlet property="closeCurrentPageBtn" destination="7Hf-r2-HBv" id="eTA-fc-tAK"/>
+                <outlet property="cvvView" destination="8tE-sx-R4E" id="EM8-OT-QGW"/>
                 <outlet property="enterCardDataLbl" destination="sUf-4M-7ut" id="K8j-yg-tg6"/>
                 <outlet property="headerLbl" destination="MHF-G2-GS1" id="rtz-j1-y7c"/>
                 <outlet property="merchantLbl" destination="FGX-il-8pE" id="15N-wq-aJC"/>
@@ -671,7 +672,7 @@
         <image name="power_by_paysky" width="640" height="192.66667175292969"/>
         <image name="three_dots" width="5" height="17"/>
         <namedColor name="MainColor">
-            <color red="0.12549019607843137" green="0.20392156862745098" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.91764705882352937" green="0.77647058823529413" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

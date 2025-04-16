@@ -55,19 +55,19 @@ class PaymentProcessingVC: UIViewController, WKNavigationDelegate {
                 debugPrint("new page url = \(url)")
                 webView.hideLoadingIndicator()
                 
-                if webView.url?.queryDictionary?["Success"] == "True" {
-                    debugPrint(webView.url?.queryDictionary ?? "")
+                if url.queryDictionary?["Success"] == "True" {
+                    debugPrint(url.queryDictionary ?? "")
                     var jsonObj: [String: Any] = [
-                        "Message": webView.url?.queryDictionary?["Message"] as String? ?? "",
-                        "ActionCode": webView.url?.queryDictionary?["ActionCode"] as String? ?? "",
-                        "AuthCode": webView.url?.queryDictionary?["AuthCode"] as String? ?? "",
-                        "MerchantReference": webView.url?.queryDictionary?["MerchantReference"] as String? ?? "",
-                        "NetworkReference": webView.url?.queryDictionary?["NetworkReference"] as String? ?? "",
-                        "ReceiptNumber": webView.url?.queryDictionary?["ReceiptNumber"] as String? ?? "",
+                        "Message": url.queryDictionary?["Message"] as String? ?? "",
+                        "ActionCode": url.queryDictionary?["ActionCode"] as String? ?? "",
+                        "AuthCode": url.queryDictionary?["AuthCode"] as String? ?? "",
+                        "MerchantReference": url.queryDictionary?["MerchantReference"] as String? ?? "",
+                        "NetworkReference": url.queryDictionary?["NetworkReference"] as String? ?? "",
+                        "ReceiptNumber": url.queryDictionary?["ReceiptNumber"] as String? ?? "",
                         "TokenCustomerId": MerchantDataManager.shared.merchant.customerId,
                     ]
-                    jsonObj["SystemReference"] = Int(webView.url?.queryDictionary?["SystemReference"] ?? "0")
-                    if webView.url?.queryDictionary?["Success"] == "True" {
+                    jsonObj["SystemReference"] = Int(url.queryDictionary?["SystemReference"] ?? "0")
+                    if url.queryDictionary?["Success"] == "True" {
                         jsonObj["Success"] = true
                     } else {
                         jsonObj["Success"] = false
@@ -80,8 +80,8 @@ class PaymentProcessingVC: UIViewController, WKNavigationDelegate {
                             showErrorAlertView(withMessage: error.localizedDescription)
                         }
                     }
-                } else if webView.url?.queryDictionary?["Success"] == "False" {
-                    showErrorAlertView(withMessage: webView.url?.queryDictionary?["Message"] ?? "")
+                } else if url.queryDictionary?["Success"] == "False" {
+                    showErrorAlertView(withMessage: url.queryDictionary?["Message"] ?? "")
                 }
                 
                 decisionHandler(.cancel)

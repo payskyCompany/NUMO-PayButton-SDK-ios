@@ -127,6 +127,12 @@ public class CreditCardValidator {
         ],[
             "name": "Meza",
             "regex":"^9818\\d*"
+        ],[
+            "name": "NUMO",
+            "regex": "^63\\d{0,}$"
+        ],[
+            "name": "NUMO",
+            "regex": "^8\\d{0,}$"
         ]
     ]
     

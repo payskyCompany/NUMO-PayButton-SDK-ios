@@ -35,22 +35,27 @@ extension AddNewCardVC {
             UIApplication.topViewController()?.view.makeToast("invalid_expire_date_date".localizedString())
             return false
         }
-        guard (self.cardCVVTF.text != "") else {
-            UIApplication.topViewController()?.view.makeToast("CVCTF_NOTVALID".localizedString())
-            return false
-        }
-        guard (self.cardCVVTF.text?.count == 3) else {
-            UIApplication.topViewController()?.view.makeToast("CVCTF_NOTVALID_LENGTH".localizedString())
-            return false
+        if cardType != "NUMO" {
+            guard (self.cardCVVTF.text != "") else {
+                UIApplication.topViewController()?.view.makeToast("CVCTF_NOTVALID".localizedString())
+                return false
+            }
+            guard (self.cardCVVTF.text?.count == 3) else {
+                UIApplication.topViewController()?.view.makeToast("CVCTF_NOTVALID_LENGTH".localizedString())
+                return false
+            }
         }
         return true
     }
     
-    func checkCardNumberValid(_ value: String) {
+    func checkCardNumberValid(_ value: String) -> String {
         self.cardNumber = value.replacedArabicDigitsWithEnglish
+        
+        var typeName: String = ""
         
         if let type = creditCardValidator.type(from: value.replacedArabicDigitsWithEnglish) {
             self.validCard = true
+            typeName = type.name
             if type.name == "Visa" {
                 self.cardNumberLogo.image = #imageLiteral(resourceName: "vi")
             } else if type.name == "Amex"  {
@@ -71,6 +76,8 @@ extension AddNewCardVC {
                 self.cardNumberLogo.image = #imageLiteral(resourceName: "Mir")
             } else if type.name == "Meza"{
                 self.cardNumberLogo.image =  #imageLiteral(resourceName: "miza_logo")
+            } else if type.name == "NUMO"{
+                self.cardNumberLogo.image =  #imageLiteral(resourceName: "numo-logo")
             } else {
                 self.validCard = false
                 self.cardNumberLogo.image = #imageLiteral(resourceName: "card_icon")
@@ -90,5 +97,7 @@ extension AddNewCardVC {
                 UIApplication.topViewController()?.view.makeToast("cardNumber_VALID".localizedString())
             }
         }
+        
+        return typeName
     }
 }

@@ -93,6 +93,17 @@ class MainViewController: UIViewController {
         emailStackView.isHidden = true
         mobileNumberStackView.isHidden = true
         customerIdStackView.isHidden = true
+        
+        merchantIdTextfield.text = "10081014649"
+        terminalIdTextfield.text = "99179395"
+        secureHashKeyTextfield.text = "3a488a89b3f7993476c252f017c488bb"
+        
+//        merchantIdTextfield.text = "11086828329"
+//        terminalIdTextfield.text = "44442092"
+//        secureHashKeyTextfield.text = "c5f0681c3c61caa40c8dbe23a9feda69"
+        
+        amountTextfield.text = "50.000"
+        currencyCodeTextfield.text = "434"
     }
 
     override func viewWillAppear(_ animated: Bool) {

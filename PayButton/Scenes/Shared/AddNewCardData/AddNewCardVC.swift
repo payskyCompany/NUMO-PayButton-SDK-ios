@@ -56,12 +56,15 @@ class AddNewCardVC: UIViewController, MaskedTextFieldDelegateListener, ScanCardD
     @IBOutlet var setAsDefaultLbl: UILabel!
     @IBOutlet var setAsDefaultCheckBox: CheckBox!
 
+    @IBOutlet weak var cvvView: UIView!
+    
     var maskedCreditCard: MaskedTextFieldDelegate!
     var maskedHolderName: MaskedTextFieldDelegate!
     var maskedCVV: MaskedTextFieldDelegate!
 
     var scanCreditCardDelegate: ScanCardDelegate?
 
+    var cardType = ""
     var cardNumber = ""
     let creditCardValidator = CreditCardValidator()
     var validCard = false
@@ -128,8 +131,12 @@ class AddNewCardVC: UIViewController, MaskedTextFieldDelegateListener, ScanCardD
         textField.text = textField.text?.replacedArabicDigitsWithEnglish
 
         if textField.tag == 1 {
-            checkCardNumberValid(value)
-
+            cardType = checkCardNumberValid(value)
+            if cardType == "NUMO"{
+                cvvView.isHidden = true
+            }else {
+                cvvView.isHidden = false
+            }
         } else if textField.tag == 2 {
             if value.count == 4 {
                 year = String(value.replacedArabicDigitsWithEnglish.suffix(2))
