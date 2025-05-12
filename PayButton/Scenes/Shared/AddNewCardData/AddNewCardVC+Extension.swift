@@ -87,14 +87,25 @@ extension AddNewCardVC {
             self.cardNumberLogo.image = #imageLiteral(resourceName: "card_icon")
         }
         
-        if value.count == 16 {
-            if self.creditCardValidator.validate(number:value.replacedArabicDigitsWithEnglish) {
-                // Card number is valid
-                self.validCard = true
-            } else {
-                self.validCard = false
-                UIApplication.topViewController()?.view.endEditing(true)
-                UIApplication.topViewController()?.view.makeToast("cardNumber_VALID".localizedString())
+        if typeName == "NUMO" {
+            if value.count == 16 || value.count == 19 {
+                if self.creditCardValidator.validate(number:value.replacedArabicDigitsWithEnglish) {
+                    self.validCard = true
+                } else {
+                    self.validCard = false
+                    if value.count == 19 {
+                        UIApplication.topViewController()?.view.endEditing(true)
+                    }
+                }
+            }
+        } else {
+            if value.count == 16 {
+                if self.creditCardValidator.validate(number:value.replacedArabicDigitsWithEnglish) {
+                    self.validCard = true
+                } else {
+                    self.validCard = false
+                    UIApplication.topViewController()?.view.endEditing(true)
+                }
             }
         }
         

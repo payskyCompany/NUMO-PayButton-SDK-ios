@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 spec.name         = "NUMOPayButtonIOS"
-spec.version      = "1.2.1"
+spec.version      = "1.2.2"
 spec.summary      = "NUMO PayButton SDK"
 spec.description  = "PayButton SDK helps make the integration of card acceptance into your app easy."
 spec.homepage     = "https://github.com/payskyCompany/NUMO-PayButton-SDK-ios"

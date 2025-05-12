@@ -9,10 +9,14 @@
 import Foundation
 
 extension NumberFormatter {
-    static func formatAmount(_ amount: Double) -> String {
+    static func formatAmount(_ amount: Double, fractionDigits: Int = 0) -> String {
         let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX") // consistent dot separator
         formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 0
+        formatter.usesGroupingSeparator = true
+        formatter.minimumFractionDigits = fractionDigits
+        formatter.maximumFractionDigits = fractionDigits
         return formatter.string(from: NSNumber(value: amount)) ?? ""
     }
 }
+

@@ -132,6 +132,8 @@ class AddNewCardVC: UIViewController, MaskedTextFieldDelegateListener, ScanCardD
 
         if textField.tag == 1 {
             cardType = checkCardNumberValid(value)
+            updateCardNumberMask(for: cardType)
+            
             if cardType == "NUMO"{
                 cvvView.isHidden = true
             }else {
@@ -273,7 +275,7 @@ extension AddNewCardVC {
         
         if let currencyCode = CurrencyHelper().getCurrencyCode(currencyCode: String(MerchantDataManager.shared.merchant.currencyCode)) {
             amountValueLbl.text = "\(currencyCode.currencyShortName)"
-            + " " + NumberFormatter.formatAmount(MerchantDataManager.shared.merchant.amount)
+            + " " + NumberFormatter.formatAmount(MerchantDataManager.shared.merchant.amount, fractionDigits: Int(currencyCode.currencyUnit) ?? 0)
         } else {
             amountValueLbl.text = "\(MerchantDataManager.shared.merchant.currencyCode)".localizedString()
             + " " + NumberFormatter.formatAmount(MerchantDataManager.shared.merchant.amount)
@@ -318,6 +320,29 @@ extension AddNewCardVC {
 }
 
 extension AddNewCardVC: AddNewCardView {
+    private func updateCardNumberMask(for cardType: String) {
+        let format: String
+        if cardType == "NUMO" {
+            format = "[0000] [0000] [0000] [0000] [000]"
+        } else {
+            format = "[0000] [0000] [0000] [0000]"
+        }
+
+        maskedCreditCard = MaskedTextFieldDelegate(primaryFormat: format)
+        maskedCreditCard.listener = self
+        cardNumberTF.delegate = maskedCreditCard
+
+        // Optionally re-apply the mask to existing text
+        if let currentText = cardNumberTF.text?.replacedArabicDigitsWithEnglish {
+            let mask = try? Mask(format: format)
+            let maskResult = mask?.apply(
+                toText: CaretString(string: currentText, caretPosition: currentText.endIndex),
+                autocomplete: true
+            )
+            cardNumberTF.text = maskResult?.formattedText.string
+        }
+    }
+    
     func hideSaveThisCardOutlets() {
         saveForFutureCheckBox.isHidden = !(presenter.getPaymentMethodData().isTokenized ?? false)
         saveForFutureLbl.isHidden = !(presenter.getPaymentMethodData().isTokenized ?? false)
